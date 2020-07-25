@@ -1,0 +1,68 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<string>
+	<!--word-->
+	<Item id="0" expr="TestDrive"/><!--TestDrive-->
+	<Item id="1" expr="オプション"/><!--Option-->
+	<Item id="2" expr="システム"/><!--System-->
+	<Item id="3" expr="言語"/><!--Language-->
+	<Item id="4" expr="エラー"/><!--Error-->
+	<Item id="5" expr="警告"/><!--Warning-->
+	<Item id="6" expr="行"/><!--Line-->
+	<Item id="7" expr="プロファイル"/><!--Profile-->
+	<Item id="8" expr="プロファイルビュー"/><!--Profile View-->
+	<Item id="9" expr="出力"/><!--Output-->
+	<Item id="10" expr="ドキュメント"/><!--Document-->
+	<Item id="11" expr="プロパティ"/><!--Properties-->
+	<Item id="12" expr="プロパティビュー"/><!--Properties View-->
+	<Item id="13" expr="メインタイトル指定"/><!--Set main title-->
+	<Item id="14" expr="サブタイトルを指定"/><!--Set sub title-->
+	<Item id="15" expr="システム"/><!--System-->
+	<Item id="16" expr="アプリケーション"/><!--Application-->
+	<Item id="17" expr="警告/エラー"/><!--Warning/Error-->
+	<!--message-->
+	<Item id="200" expr="ドキュメント（%s）の更新を試みます。。。"/><!--Try to update document(%s)...-->
+	<Item id="201" expr="ドキュメント（%s）の更新が完了しました。"/><!--Document(%s) update is done.-->
+	<Item id="202" expr="プログラムを再起動後,選択した言語で表示されます。"/><!--When you restart the program, the selected language will be applied.-->
+	<Item id="203" expr="プロジェクトがロックされ、ユーザーのコマンドを実行することができません。"/><!--Your command can not be performed, because current project is locked.-->
+	<Item id="204" expr="プロジェクトはありません"/><!--No Project-->
+	<Item id="205" expr="あまりにも多くの再帰呼び出しが存在しています！"/><!--Found too many recursive calls!-->
+	<Item id="206" expr="まず、プロジェクトを開く]を実行してください！"/><!--Open your project, first!-->
+	<Item id="207" expr="別のプロファイルが最初に実行中です！"/><!--Another profile is running!-->
+	<Item id="208" expr="プロファイル名が存在しません！"/><!--No profile name is existed!-->
+	<Item id="209" expr="有効なファイルパスがありません。"/><!--Invalid file path.-->
+	<Item id="210" expr="プロジェクトを開くことができません。"/><!--Can't open the project file.-->
+	<Item id="211" expr="進行中にエラーが発生しました。"/><!--Error is occured in progress.-->
+	<Item id="212" expr="ユーザーによって停止されました。"/><!--Stopped by user request.-->
+	<Item id="213" expr="メモリモデルの作成 : "/><!--Create memory model : -->
+	<Item id="214" expr="あまりにも大きなメモリモデルが要求されました。"/><!--Too big memory allocation.-->
+	<Item id="215" expr="既に同じ名前を持つメモリモデルが存在します。"/><!--The memory model with the same name already exists.-->
+	<Item id="216" expr="存在しないメモリモデルです。"/><!--Not exist memory model.-->
+	<Item id="217" expr="間違った色のタイプが指定されました！"/><!--Invalid color type has been specified!-->
+	<Item id="218" expr="イメージファイルからメモリを読む"/><!--Load memory from image-->
+	<Item id="219" expr="バイナリファイルからメモリを読む"/><!--Load memory from binary file-->
+	<Item id="220" expr="メモリから画像を保存"/><!--Store image from memory-->
+	<Item id="221" expr="メモリからバイナリファイルとして保存"/><!--Store binary file from memory-->
+	<Item id="222" expr="指定したドキュメント('%s')のタイトル('%s')が重複します。"/><!--Specified document('%s') title('%s') is duplicated.-->
+	<Item id="223" expr="プロジェクトをロードすることはできません。&#xA;ログ出力エラーメッセージを確認してください。&#xA;現在のプロジェクトが終了します。"/><!--Can't load this project.\nPlease check error message on output log.\nWe'll close the project now.-->
+	<Item id="224" expr="無効なコマンドです。"/><!--Invalid command.-->
+	<Item id="225" expr="'%s' ドキュメントが他のドキュメントまたはシステムから参照があり、現在ドキュメントの状態を維持します。"/><!--'%s' Document is locked from another document or system implementation. So it's reserved current state.-->
+	<Item id="226" expr="ライブラリを開くことができません。 : %s"/><!--Can't load a library. : %s-->
+	<Item id="227" expr="ドキュメントエントリポイント関数（'RegisterDocument'）を見つけることができません。"/><!--Can't find a document entry-point function('RegisterDocument').-->
+	<Item id="228" expr="コマンド :"/><!--Command :-->
+	<Item id="229" expr="ドキュメントがロックされています。"/><!--Document is locked.-->
+	<Item id="230" expr="ドキュメントのアクセスが拒否されました。"/><!--Document access has been denied.-->
+	<Item id="231" expr="'%s' ドキュメントは、現在非表示になっています。"/><!--'%s' document is hide status.-->
+	<Item id="232" expr="ドキュメント（%s）を見つけることができません。"/><!--'%s' document is not found.-->
+	<Item id="233" expr="'%s'(%s)を実行します。。。\n\n"/><!--'%s'(%s) is running...\n\n-->
+	<Item id="234" expr="\n'%s'が終了しました。\n"/><!--\n'%s' is done.\n-->
+	<Item id="235" expr="ファイルをロードすることはできません。"/><!--Can not load the file.-->
+	<Item id="236" expr="最初の実行であるか、または実行環境が変更され、管理者の権限でシステム設定が試行されます。"/><!--It is the first execution, or the execution environment is changed, and the system setting is tried with the administrator's authority.-->
+	<!--menu : Screeen buffer-->
+	<Item id="1000" expr="ファイル(&F)"/><!--File(&F)-->
+	<Item id="1001" expr="ファイルから開く(&L)"/><!--Loading from file(&L)-->
+	<Item id="1002" expr="ファイルに保存(&S)"/><!--Save to file(&S)-->
+	<Item id="1003" expr="1:1 スケール補正"/><!--Fit to 1:1 scale-->
+	<Item id="1004" expr="画面サイズに補正"/><!--Fit to screen-->
+	<Item id="1005" expr="アンチエイリアス"/><!--Antialiasing-->
+	<Item id="1006" expr="アクション同期化"/><!--Synchronize-->
+</string>

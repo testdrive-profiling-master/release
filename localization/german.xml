@@ -1,0 +1,68 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<string>
+	<!--word-->
+	<Item id="0" expr="Probefahrt"/><!--TestDrive-->
+	<Item id="1" expr="Möglichkeit"/><!--Option-->
+	<Item id="2" expr="System"/><!--System-->
+	<Item id="3" expr="Sprache"/><!--Language-->
+	<Item id="4" expr="Fehler"/><!--Error-->
+	<Item id="5" expr="Warnung"/><!--Warning-->
+	<Item id="6" expr="Linie"/><!--Line-->
+	<Item id="7" expr="Profil"/><!--Profile-->
+	<Item id="8" expr="Profil ansehen"/><!--Profile View-->
+	<Item id="9" expr="Ausgabe"/><!--Output-->
+	<Item id="10" expr="Dokument"/><!--Document-->
+	<Item id="11" expr="Immobilien"/><!--Properties-->
+	<Item id="12" expr="Eigenschaften anzeigen"/><!--Properties View-->
+	<Item id="13" expr="Set Haupttitel"/><!--Set main title-->
+	<Item id="14" expr="Setzen Sie die Untertitel"/><!--Set sub title-->
+	<Item id="15" expr="System"/><!--System-->
+	<Item id="16" expr="Anwendung"/><!--Application-->
+	<Item id="17" expr="Warnung/Fehler"/><!--Warning/Error-->
+	<!--message-->
+	<Item id="200" expr="Versuchen Sie Dokument aktualisieren(%s)..."/><!--Try to update document(%s)...-->
+	<Item id="201" expr="Dokument(%s) aktualisierung durchgeführt wird."/><!--Document(%s) update is done.-->
+	<Item id="202" expr="Wenn Sie das Programm neu starten, wird die gewählte Sprache verwendet werden."/><!--When you restart the program, the selected language will be applied.-->
+	<Item id="203" expr="Ihr Befehl nicht ausgeführt werden kann , weil aktuelle Projekt ist gesperrt."/><!--Your command can not be performed, because current project is locked.-->
+	<Item id="204" expr="Kein Projekt"/><!--No Project-->
+	<Item id="205" expr="Gefunden zu viele rekursive Aufrufe!"/><!--Found too many recursive calls!-->
+	<Item id="206" expr="Öffnen Sie Ihr Projekt, erste!"/><!--Open your project, first!-->
+	<Item id="207" expr="Ein weiteres Profil läuft!"/><!--Another profile is running!-->
+	<Item id="208" expr="Kein Profilname existiert!"/><!--No profile name is existed!-->
+	<Item id="209" expr="Ungültige Dateipfad."/><!--Invalid file path.-->
+	<Item id="210" expr="Kann nicht öffnen Sie die Projektdatei."/><!--Can't open the project file.-->
+	<Item id="211" expr="Fehler im Gange aufgetreten."/><!--Error is occured in progress.-->
+	<Item id="212" expr="Durch Benutzeranforderung gestoppt."/><!--Stopped by user request.-->
+	<Item id="213" expr="Erstellen Speichermodell : "/><!--Create memory model : -->
+	<Item id="214" expr="Zu groß Speicherzuweisung."/><!--Too big memory allocation.-->
+	<Item id="215" expr="Die Speicher-Modell mit dem gleichen Namen ist bereits vorhanden."/><!--The memory model with the same name already exists.-->
+	<Item id="216" expr="Nicht vorhanden Speichermodell."/><!--Not exist memory model.-->
+	<Item id="217" expr="Ungültige Farbtyp angegeben wurde!"/><!--Invalid color type has been specified!-->
+	<Item id="218" expr="Ladespeicher von Bild"/><!--Load memory from image-->
+	<Item id="219" expr="Ladespeicher aus Binärdatei"/><!--Load memory from binary file-->
+	<Item id="220" expr="Shop Bild aus dem Speicher"/><!--Store image from memory-->
+	<Item id="221" expr="Binär-Datei zu speichern aus dem Speicher"/><!--Store binary file from memory-->
+	<Item id="222" expr="Angegebene Dokument ('%s') title ('%s') wird dupliziert."/><!--Specified document('%s') title('%s') is duplicated.-->
+	<Item id="223" expr="Kann dieses Projekt nicht laden.&#xA;Bitte überprüfen Sie Fehlermeldung  auf Ausgabeprotokoll.&#xA;Wir werden das Projekt nun schließen."/><!--Can't load this project.\nPlease check error message on output log.\nWe'll close the project now.-->
+	<Item id="224" expr="Ungültiger Befehl."/><!--Invalid command.-->
+	<Item id="225" expr="'%s' Dokument wird aus einem anderen Dokument oder System-Implementierung gesperrt. So ist es vorbehalten aktuellen Zustand."/><!--'%s' Document is locked from another document or system implementation. So it's reserved current state.-->
+	<Item id="226" expr="Kann eine Bibliothek nicht laden. : %s"/><!--Can't load a library. : %s-->
+	<Item id="227" expr="Kann ein Dokument Einstiegspunktfunktion nicht gefunden('RegisterDocument')."/><!--Can't find a document entry-point function('RegisterDocument').-->
+	<Item id="228" expr="Befehl :"/><!--Command :-->
+	<Item id="229" expr="Dokument gesperrt."/><!--Document is locked.-->
+	<Item id="230" expr="Dokumentenzugriff wurde verweigert."/><!--Document access has been denied.-->
+	<Item id="231" expr="'%s' Dokument hide Status."/><!--'%s' document is hide status.-->
+	<Item id="232" expr="'%s' Dokument nicht gefunden wird."/><!--'%s' document is not found.-->
+	<Item id="233" expr="'%s'(%s) läuft...\n\n"/><!--'%s'(%s) is running...\n\n-->
+	<Item id="234" expr="\n'%s' ist fertig.\n"/><!--\n'%s' is done.\n-->
+	<Item id="235" expr="Kann die Datei nicht laden."/><!--Can not load the file.-->
+	<Item id="236" expr="Es ist die erste Ausführung oder die Ausführungsumgebung wird geändert und die Systemeinstellung wird mit der Berechtigung des Administrators versucht."/><!--It is the first execution, or the execution environment is changed, and the system setting is tried with the administrator's authority.-->
+	<!--menu : Screeen buffer-->
+	<Item id="1000" expr="Datei(&F)"/><!--File(&F)-->
+	<Item id="1001" expr="Laden aus Datei(&L)"/><!--Loading from file(&L)-->
+	<Item id="1002" expr="Speichern Sie die Datei(&S)"/><!--Save to file(&S)-->
+	<Item id="1003" expr="Passen Maßstab 1:1"/><!--Fit to 1:1 scale-->
+	<Item id="1004" expr="An Bildschirm anpassen"/><!--Fit to screen-->
+	<Item id="1005" expr="Kantenglättung"/><!--Antialiasing-->
+	<Item id="1006" expr="Synchronisieren"/><!--Synchronize-->
+</string>

@@ -1,0 +1,13 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<Localization>
+	<!--
+	-->
+	<language name="中文简体" lang_id="4" sublang_id="2" file="chinese_simplified.xml"/>
+	<language name="中文繁體" lang_id="1211396" sublang_id="1" file="chinese_traditional.xml"/>
+	<language name="Deutsch" lang_id="7" sublang_id="1" file="german.xml"/>
+	<language name="English" lang_id="9" sublang_id="1" file="english.xml"/>
+	<language name="Español" lang_id="10" sublang_id="1" file="spanish.xml"/>
+	<language name="日本語" lang_id="17" sublang_id="1" file="japanese.xml"/>
+	<language name="한국어" lang_id="18" sublang_id="1" file="korean.xml"/>
+	<language name="Русский" lang_id="25" sublang_id="1" file="russian.xml"/>
+</Localization>

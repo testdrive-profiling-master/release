@@ -1,0 +1,68 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<string>
+	<!--word-->
+	<Item id="0" expr="테스트 드라이브"/>
+	<Item id="1" expr="옵션"/>
+	<Item id="2" expr="시스템"/>
+	<Item id="3" expr="언어"/>
+	<Item id="4" expr="에러"/>
+	<Item id="5" expr="경고"/>
+	<Item id="6" expr="줄"/>
+	<Item id="7" expr="프로파일"/>
+	<Item id="8" expr="프로파일 뷰"/>
+	<Item id="9" expr="출력"/>
+	<Item id="10" expr="도큐먼트"/>
+	<Item id="11" expr="속성"/>
+	<Item id="12" expr="속성 뷰"/>
+	<Item id="13" expr="메인 타이틀 지정"/>
+	<Item id="14" expr="서브 타이틀 지정"/>
+	<Item id="15" expr="시스템"/>
+	<Item id="16" expr="어플리케이션"/>
+	<Item id="17" expr="경고/에러"/>
+	<!--message-->
+	<Item id="200" expr="도큐먼트(%s) 업데이트를 시도합니다..."/>
+	<Item id="201" expr="도큐먼트(%s) 업데이트가 완료되었습니다."/>
+	<Item id="202" expr="프로그램을 다시 시작할 때, 선택된 언어가 적용됩니다."/>
+	<Item id="203" expr="프로젝트가 잠겨 있으므로 사용자의 명령을 수행할 수 없습니다."/>
+	<Item id="204" expr="프로젝트 없음"/>
+	<Item id="205" expr="너무 많은 재귀 호출이 존재합니다!"/>
+	<Item id="206" expr="먼저 프로젝트 열기를 수행하십시오!"/>
+	<Item id="207" expr="다른 프로파일이 먼저 실행 중입니다!"/>
+	<Item id="208" expr="프로파일 이름이 존재하지 않습니다!"/>
+	<Item id="209" expr="유효한 파일 경로가 아닙니다."/>
+	<Item id="210" expr="프로젝트를 열 수 없습니다."/>
+	<Item id="211" expr="진행 중에 에러가 발생했습니다."/>
+	<Item id="212" expr="사용자에 의해 중지되었습니다."/>
+	<Item id="213" expr="메모리 모델 생성 : "/>
+	<Item id="214" expr="너무 큰 메모리 모델이 요청되었습니다."/>
+	<Item id="215" expr="이미 동일한 이름을 가지는 메모리 모델이 존재합니다."/>
+	<Item id="216" expr="존재하지 않는 메모리 모델입니다."/>
+	<Item id="217" expr="잘못된 컬러 타입이 지정되었습니다!"/>
+	<Item id="218" expr="이미지 파일로 부터 메모리 읽기"/>
+	<Item id="219" expr="바이너리 파일로 부터 메모리 읽기"/>
+	<Item id="220" expr="메모리로 부터 이미지 저장"/>
+	<Item id="221" expr="메모리로 부터 바이너리 파일로 저장"/>
+	<Item id="222" expr="지정한 문서('%s')의 타이틀('%s')이 중복됩니다."/>
+	<Item id="223" expr="프로젝트를 로드할 수 없습니다.&#xA;로그 출력 에러 메시지를 확인하십시오.&#xA;현재 프로젝트가 종료됩니다."/>
+	<Item id="224" expr="유효하지 않은 명령입니다."/>
+	<Item id="225" expr="'%s' 도큐먼트가 다른 도큐먼트 또는 시스템으로부터 참조가 있어 현재 도큐먼트 상태를 유지합니다."/>
+	<Item id="226" expr="라이브러리를 열 수 없습니다. : %s"/>
+	<Item id="227" expr="도큐먼트 진입점 함수('RegisterDocument')를 찾을 수 없습니다."/>
+	<Item id="228" expr="명령 :"/>
+	<Item id="229" expr="도큐먼트가 잠겨있습니다."/>
+	<Item id="230" expr="도큐먼트 접근이 거부되었습니다."/>
+	<Item id="231" expr="'%s' 도큐먼트는 현재 숨김 상태입니다."/>
+	<Item id="232" expr="도큐먼트(%s)를 찾을 수 없습니다."/>
+	<Item id="233" expr="'%s'(%s) 를 실행합니다...\n\n"/>
+	<Item id="234" expr="\n'%s' 가 종료되었습니다.\n"/>
+	<Item id="235" expr="파일을 로드할 수 없습니다."/>
+	<Item id="236" expr="첫 실행이거나 실행 환경이 변경되어, 관리자 권한으로 시스템 설정을 시도합니다."/>
+	<!--menu : Screeen buffer-->
+	<Item id="1000" expr="파일(&F)"/>
+	<Item id="1001" expr="파일에서 로딩(&L)"/>
+	<Item id="1002" expr="파일로 저장(&S)"/>
+	<Item id="1003" expr="1:1 스케일 피팅"/>
+	<Item id="1004" expr="스크린 크기에 맞춤"/>
+	<Item id="1005" expr="안티알리아싱"/>
+	<Item id="1006" expr="액션 동기화"/>
+</string>

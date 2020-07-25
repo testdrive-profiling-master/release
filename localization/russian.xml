@@ -1,0 +1,68 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<string>
+	<!--word-->
+	<Item id="0" expr="Тест-Драйв"/><!--TestDrive-->
+	<Item id="1" expr="вариант"/><!--Option-->
+	<Item id="2" expr="Система"/><!--System-->
+	<Item id="3" expr="язык"/><!--Language-->
+	<Item id="4" expr="Ошибка"/><!--Error-->
+	<Item id="5" expr="Внимание"/><!--Warning-->
+	<Item id="6" expr="Пиния"/><!--Line-->
+	<Item id="7" expr="Профиль"/><!--Profile-->
+	<Item id="8" expr="Профиль Посмотреть"/><!--Profile View-->
+	<Item id="9" expr="Выход"/><!--Output-->
+	<Item id="10" expr="документ"/><!--Document-->
+	<Item id="11" expr="Свойства"/><!--Properties-->
+	<Item id="12" expr="Свойства Просмотр"/><!--Properties View-->
+	<Item id="13" expr="Установите основной заголовок"/><!--Set main title-->
+	<Item id="14" expr="Установите югу название"/><!--Set sub title-->
+	<Item id="15" expr="Система"/><!--System-->
+	<Item id="16" expr="Применение"/><!--Application-->
+	<Item id="17" expr="Внимание/Ошибка"/><!--Warning/Error-->
+	<!--message-->
+	<Item id="200" expr="Попробуйте обновить документ(%s)..."/><!--Try to update document(%s)...-->
+	<Item id="201" expr="Обновление(%s) документа делается."/><!--Document(%s) update is done.-->
+	<Item id="202" expr="Когда вы запустите программу, выбранный язык будет применяться."/><!--When you restart the program, the selected language will be applied.-->
+	<Item id="203" expr="Ваш команда не может быть выполнена , потому что текущий проект закрывается."/><!--Your command can not be performed, because current project is locked.-->
+	<Item id="204" expr="Нет проекта"/><!--No Project-->
+	<Item id="205" expr="Найдено слишком много рекурсивные вызовы!"/><!--Found too many recursive calls!-->
+	<Item id="206" expr="Откройте свой проект, первая!"/><!--Open your project, first!-->
+	<Item id="207" expr="Другой раздел работает!"/><!--Another profile is running!-->
+	<Item id="208" expr="Нет Имя профиля не существовало!"/><!--No profile name is existed!-->
+	<Item id="209" expr="Неверный путь к файлу."/><!--Invalid file path.-->
+	<Item id="210" expr="Не удается открыть файл проекта."/><!--Can't open the project file.-->
+	<Item id="211" expr="Ошибка произошла в процессе."/><!--Error is occured in progress.-->
+	<Item id="212" expr="Остановился по запросу пользователя."/><!--Stopped by user request.-->
+	<Item id="213" expr="Создать модель памяти : "/><!--Create memory model : -->
+	<Item id="214" expr="Слишком большой выделения памяти."/><!--Too big memory allocation.-->
+	<Item id="215" expr="Модель памяти с таким именем уже существует."/><!--The memory model with the same name already exists.-->
+	<Item id="216" expr="Не существует модель памяти."/><!--Not exist memory model.-->
+	<Item id="217" expr="Неверный тип цвет был указан!"/><!--Invalid color type has been specified!-->
+	<Item id="218" expr="Загрузочная память с картинки"/><!--Load memory from image-->
+	<Item id="219" expr="Загрузочная память от двоичного файла"/><!--Load memory from binary file-->
+	<Item id="220" expr="Магазин изображений из памяти"/><!--Store image from memory-->
+	<Item id="221" expr="Храните двоичный файл из памяти"/><!--Store binary file from memory-->
+	<Item id="222" expr="Указано документ('%s') Название('%s') дублируется."/><!--Specified document('%s') title('%s') is duplicated.-->
+	<Item id="223" expr="Не удается загрузить этот проект.&#xA;Пожалуйста, проверьте сообщение об ошибке на выходе журнала.&#xA;Мы закрыть проект в настоящее время."/><!--Can't load this project.\nPlease check error message on output log.\nWe'll close the project now.-->
+	<Item id="224" expr="Неверная команда."/><!--Invalid command.-->
+	<Item id="225" expr="'%s' Документ заблокирован из другого документа или системы реализации. Так что это защищены текущее состояние."/><!--'%s' Document is locked from another document or system implementation. So it's reserved current state.-->
+	<Item id="226" expr="Не удается загрузить библиотеку. : %s/><!--Can't load a library. : %s-->
+	<Item id="227" expr="Не можете найти функцию документ точки входа('RegisterDocument')."/><!--Can't find a document entry-point function('RegisterDocument').-->
+	<Item id="228" expr="Команда :"/><!--Command :-->
+	<Item id="229" expr="Документ заблокирован."/><!--Document is locked.-->
+	<Item id="230" expr="Доступ к документам был отклонен."/><!--Document access has been denied.-->
+	<Item id="231" expr="'%s' документ спрятать статус."/><!--'%s' document is hide status.-->
+	<Item id="232" expr="'%s' документ не найден."/><!--'%s' document is not found.-->
+	<Item id="233" expr='%s'(%s) работает...\n\n"/><!--'%s'(%s) is running...\n\n-->
+	<Item id="234" expr="\n'%s' делается.\n"/><!--\n'%s' is done.\n-->
+	<Item id="235" expr="Не удается загрузить файл."/><!--Can not load the file.-->
+	<Item id="236" expr="Это первое исполнение, или среда исполнения изменяется, и системные настройки проверяются с полномочиями администратора."/><!--It is the first execution, or the execution environment is changed, and the system setting is tried with the administrator's authority.-->
+	<!--menu : Screeen buffer-->
+	<Item id="1000" expr="Файл(&F)"/><!--File(&F)-->
+	<Item id="1001" expr="Загрузка из файла(&L)"/><!--Loading from file(&L)-->
+	<Item id="1002" expr="Сохранить в файл(&S)"/><!--Save to file(&S)-->
+	<Item id="1003" expr="По размеру масштабе 1:1"/><!--Fit to 1:1 scale-->
+	<Item id="1004" expr="По размеру экрана"/><!--Fit to screen-->
+	<Item id="1005" expr="Сглаживание"/><!--Antialiasing-->
+	<Item id="1006" expr="Синхронизировать"/><!--Synchronize-->
+</string>

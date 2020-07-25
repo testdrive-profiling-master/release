@@ -1,0 +1,49 @@
+export LANG="en_US.ANSI"
+
+pacman -S --noconfirm zip
+pacman -S --noconfirm unzip
+pacman -S --noconfirm gperf
+pacman -S --noconfirm perl
+pacman -S --noconfirm tar
+pacman -S --noconfirm liblzo2-devel
+pacman -S --noconfirm liblzma
+pacman -S --noconfirm expect
+pacman -S --noconfirm bison
+pacman -S --noconfirm flex
+pacman -S --noconfirm patch
+pacman -S --noconfirm autoconf
+pacman -S --noconfirm libtool
+pacman -S --noconfirm automake
+pacman -S --noconfirm mingw-w64-i686-gcc-libs
+pacman -S --noconfirm msys2-w32api-headers
+pacman -S --noconfirm msys2-w32api-runtime
+pacman -S --noconfirm mingw-w64-x86_64-wget
+pacman -S --noconfirm mingw-w64-x86_64-libconfig
+pacman -S --noconfirm mingw-w64-x86_64-binutils
+pacman -S --noconfirm mingw-w64-x86_64-gcc-libs
+pacman -S --noconfirm mingw-w64-x86_64-pkg-config
+pacman -S --noconfirm mingw-w64-x86_64-ccache
+pacman -S --noconfirm mingw-w64-x86_64-zlib
+pacman -S --noconfirm mingw-w64-x86_64-putty
+pacman -S --noconfirm mingw-w64-x86_64-make
+pacman -S --noconfirm mingw-w64-x86_64-gcc
+pacman -S --noconfirm mingw-w64-x86_64-gdb
+pacman -S --noconfirm mingw-w64-x86_64-gmp
+pacman -S --noconfirm mingw-w64-x86_64-tcl
+pacman -S --noconfirm mingw-w64-x86_64-tk
+pacman -S --noconfirm mingw-w64-x86_64-wined3d
+pacman -S --noconfirm mingw-w64-x86_64-opencv
+pacman -S --noconfirm mingw-w64-x86_64-cppcheck
+pacman -S --noconfirm mingw-w64-x86_64-boost
+pacman -S --noconfirm mingw-w64-x86_64-python3
+pacman -S --noconfirm mingw-w64-x86_64-astyle
+pacman -S --noconfirm mingw-w64-x86_64-gtkwave
+pacman -S --noconfirm mingw-w64-x86_64-verilator
+pacman -S --noconfirm mingw-w64-x86_64-ghex
+pacman -S --noconfirm mingw-w64-x86_64-cmake
+pacman -S --noconfirm mingw-w64-x86_64-clang
+
+cd /mingw64/bin
+ln -s mingw32-make.exe make.exe
+cd /
+exit

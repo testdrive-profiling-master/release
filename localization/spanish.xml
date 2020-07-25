@@ -1,0 +1,68 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<string>
+	<!--word-->
+	<Item id="0" expr="TestDrive"/><!--TestDrive-->
+	<Item id="1" expr="Opción"/><!--Option-->
+	<Item id="2" expr="Sistema"/><!--System-->
+	<Item id="3" expr="Idioma"/><!--Language-->
+	<Item id="4" expr="Error"/><!--Error-->
+	<Item id="5" expr="Advertencia"/><!--Warning-->
+	<Item id="6" expr="Línea"/><!--Line-->
+	<Item id="7" expr="Perfil"/><!--Profile-->
+	<Item id="8" expr="Perfil Ver"/><!--Profile View-->
+	<Item id="9" expr="Salida"/><!--Output-->
+	<Item id="10" expr="Documento"/><!--Document-->
+	<Item id="11" expr="propiedades"/><!--Properties-->
+	<Item id="12" expr="Vista de propiedades"/><!--Properties View-->
+	<Item id="13" expr="Ajuste del título principal"/><!--Set main title-->
+	<Item id="14" expr="Establecer título sub"/><!--Set sub title-->
+	<Item id="15" expr="Sistema"/><!--System-->
+	<Item id="16" expr="Aplicación"/><!--Application-->
+	<Item id="17" expr="Advertencia/Error"/><!--Warning/Error-->
+	<!--message-->
+	<Item id="200" expr="Trate de actualizar el documento(%s)..."/><!--Try to update document(%s)...-->
+	<Item id="201" expr="Documento (%s) actualización se realiza."/><!--Document(%s) update is done.-->
+	<Item id="202" expr="Al reiniciar el programa, se aplicará el idioma seleccionado."/><!--When you restart the program, the selected language will be applied.-->
+	<Item id="203" expr="Su mandato no se puede realizar, porque el proyecto actual está bloqueado."/><!--Your command can not be performed, because current project is locked.-->
+	<Item id="204" expr="No Proyecto"/><!--No Project-->
+	<Item id="205" expr="Encontradas demasiadas llamadas recursivas!"/><!--Found too many recursive calls!-->
+	<Item id="206" expr="Abra su proyecto, primero!"/><!--Open your project, first!-->
+	<Item id="207" expr="Otro perfil está funcionando!"/><!--Another profile is running!-->
+	<Item id="208" expr="Sin nombre de perfil se existía!"/><!--No profile name is existed!-->
+	<Item id="209" expr="Ruta de archivo no válido."/><!--Invalid file path.-->
+	<Item id="210" expr="No se puede abrir el archivo de proyecto."/><!--Can't open the project file.-->
+	<Item id="211" expr="El error se produjo en curso."/><!--Error is occured in progress.-->
+	<Item id="212" expr="Detenido por petición del usuario."/><!--Stopped by user request.-->
+	<Item id="213" expr="Crear modelo de memoria : "/><!--Create memory model : -->
+	<Item id="214" expr="Asignación de memoria demasiado grande."/><!--Too big memory allocation.-->
+	<Item id="215" expr="El modelo de memoria con el mismo nombre ya existe."/><!--The memory model with the same name already exists.-->
+	<Item id="216" expr="No existe modelo de memoria."/><!--Not exist memory model.-->
+	<Item id="217" expr="Tipo de Color no válido ha sido definido!"/><!--Invalid color type has been specified!-->
+	<Item id="218" expr="Memoria de carga de imagen"/><!--Load memory from image-->
+	<Item id="219" expr="Memoria de carga de archivo binario"/><!--Load memory from binary file-->
+	<Item id="220" expr="Imagen de la tienda de la memoria"/><!--Store image from memory-->
+	<Item id="221" expr="Guarde el archivo binario de la memoria"/><!--Store binary file from memory-->
+	<Item id="222" expr="Documento especificado ('%s') title ('%s') se duplica."/><!--Specified document('%s') title('%s') is duplicated.-->
+	<Item id="223" expr="No se puede cargar este proyecto.&#xA;Por favor, compruebe el mensaje de error en el registro de salida.&#xA;Vamos a cerrar el proyecto ahora."/><!--Can't load this project.\nPlease check error message on output log.\nWe'll close the project now.-->
+	<Item id="224" expr="Comando no válido."/><!--Invalid command.-->
+	<Item id="225" expr="Documento '%s' está bloqueado desde otra aplicación documento o sistema. Así que ha reservado el estado actual."/><!--'%s' Document is locked from another document or system implementation. So it's reserved current state.-->
+	<Item id="226" expr="No se puede cargar una biblioteca. : %s"/><!--Can't load a library. : %s-->
+	<Item id="227" expr="Si no encuentra una función de punto de entrada de documentos('RegisterDocument')."/><!--Can't find a document entry-point function('RegisterDocument').-->
+	<Item id="228" expr="Comando :"/><!--Command :-->
+	<Item id="229" expr="Documento está bloqueado."/><!--Document is locked.-->
+	<Item id="230" expr="Acceso a los documentos ha sido negada."/><!--Document access has been denied.-->
+	<Item id="231" expr="'%s' documento es ocultar estado."/><!--'%s' document is hide status.-->
+	<Item id="232" expr="'%s' documento no se encuentra."/><!--'%s' document is not found.-->
+	<Item id="233" expr="'%s'(%s) está en marcha...\n\n"/><!--'%s'(%s) is running...\n\n-->
+	<Item id="234" expr="\n'%s' está hecho.\n"/><!--\n'%s' is done.\n-->
+	<Item id="235" expr="No se puede cargar el archivo."/><!--Can not load the file.-->
+	<Item id="236" expr="Es la primera ejecución, o el entorno de ejecución se cambia, y la configuración del sistema se prueba con la autoridad del administrador."/><!--It is the first execution, or the execution environment is changed, and the system setting is tried with the administrator's authority.-->
+	<!--menu : Screeen buffer-->
+	<Item id="1000" expr="Expediente(&F)"/><!--File(&F)-->
+	<Item id="1001" expr="Cargando de archivo(&L)"/><!--Loading from file(&L)-->
+	<Item id="1002" expr="Guardar en archivo(&S)"/><!--Save to file(&S)-->
+	<Item id="1003" expr="Ajustar a escala 1:1"/><!--Fit to 1:1 scale-->
+	<Item id="1004" expr="Ajustar a la pantalla"/><!--Fit to screen-->
+	<Item id="1005" expr="Antialiasing"/><!--Antialiasing-->
+	<Item id="1006" expr="Sincronizar"/><!--Synchronize-->
+</string>

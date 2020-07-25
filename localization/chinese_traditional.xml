@@ -1,0 +1,68 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<string>
+	<!--word-->
+	<Item id="0" expr="測試驅動"/><!--TestDrive-->
+	<Item id="1" expr="選項"/><!--Option-->
+	<Item id="2" expr="系統"/><!--System-->
+	<Item id="3" expr="語言"/><!--Language-->
+	<Item id="4" expr="错误"/><!--Error-->
+	<Item id="5" expr="警告"/><!--Warning-->
+	<Item id="6" expr="行"/><!--Line-->
+	<Item id="7" expr="轮廓"/><!--Profile-->
+	<Item id="8" expr="资料查看"/><!--Profile View-->
+	<Item id="9" expr="产量"/><!--Output-->
+	<Item id="10" expr="文件"/><!--Document-->
+	<Item id="11" expr="属性"/><!--Properties-->
+	<Item id="12" expr="属性视图"/><!--Properties View-->
+	<Item id="13" expr="设置主标题"/><!--Set main title-->
+	<Item id="14" expr="设置子标题"/><!--Set sub title-->
+	<Item id="15" expr="系統"/><!--System-->
+	<Item id="16" expr="应用"/><!--Application-->
+	<Item id="17" expr="警告/错误"/><!--Warning/Error-->
+	<!--message-->
+	<Item id="200" expr="尝试更新文件（'%s'）..."/><!--Try to update document(%s)...-->
+	<Item id="201" expr="文件（％s）更新完成。"/><!--Document(%s) update is done.-->
+	<Item id="202" expr="当您重新启动该程序，所选择的语言将被应用。"/><!--When you restart the program, the selected language will be applied.-->
+	<Item id="203" expr="您的命令无法执行，因为目前的项目已被锁定。"/><!--Your command can not be performed, because current project is locked.-->
+	<Item id="204" expr="没有项目"/><!--No Project-->
+	<Item id="205" expr="发现了太多的递归调用！"/><!--Found too many recursive calls!-->
+	<Item id="206" expr="打开你的项目，第一个！"/><!--Open your project, first!-->
+	<Item id="207" expr="另一个配置文件运行！"/><!--Another profile is running!-->
+	<Item id="208" expr="没有配置文件名是存在的！"/><!--No profile name is existed!-->
+	<Item id="209" expr="无效的文件路径。"/><!--Invalid file path.-->
+	<Item id="210" expr="无法打开项目文件。"/><!--Can't open the project file.-->
+	<Item id="211" expr="错误是发生在进步。"/><!--Error is occured in progress.-->
+	<Item id="212" expr="按用户要求停止。"/><!--Stopped by user request.-->
+	<Item id="213" expr="创建内存模型 ： "/><!--Create memory model : -->
+	<Item id="214" expr="过大的内存分配。"/><!--Too big memory allocation.-->
+	<Item id="215" expr="已存在同名的内存模型。"/><!--The memory model with the same name already exists.-->
+	<Item id="216" expr="不存在的内存模型。"/><!--Not exist memory model.-->
+	<Item id="217" expr="无效的颜色类型已指定！"/><!--Invalid color type has been specified!-->
+	<Item id="218" expr="从图像装载存储器"/><!--Load memory from image-->
+	<Item id="219" expr="从二进制文件载入内存"/><!--Load memory from binary file-->
+	<Item id="220" expr="从内存中存储的图像"/><!--Store image from memory-->
+	<Item id="221" expr="从内存中存储二进制文件"/><!--Store binary file from memory-->
+	<Item id="222" expr="指定的文件（'%s'）标题（'%s'）是重复的。"/><!--Specified document('%s') title('%s') is duplicated.-->
+	<Item id="223" expr="无法加载这个项目。&#xA;請在輸出日誌檢查錯誤消息。&#xA;現在，我們將關閉該項目。"/><!--Can't load this project.\nPlease check error message on output log.\nWe'll close the project now.-->
+	<Item id="224" expr="无效的命令。"/><!--Invalid command.-->
+	<Item id="225" expr="'%s'文件是从另一个文件或系统实现锁定。因此，它保留当前状态。"/><!--'%s' Document is locked from another document or system implementation. So it's reserved current state.-->
+	<Item id="226" expr="无法加载库。 : %s"/><!--Can't load a library. : %s-->
+	<Item id="227" expr="找不到文件入口点函数('RegisterDocument')。"/><!--Can't find a document entry-point function('RegisterDocument').-->
+	<Item id="228" expr="命令 :"/><!--Command :-->
+	<Item id="229" expr="文件被锁定。"/><!--Document is locked.-->
+	<Item id="230" expr="文件访问被拒绝。"/><!--Document access has been denied.-->
+	<Item id="231" expr="'%s'文件为隐藏状态。"/><!--'%s' document is hide status.-->
+	<Item id="232" expr="没有找到文件（'%s'）。"/><!--'%s' document is not found.-->
+	<Item id="233" expr="尝试更新文件（'%s'）...\n\n"/><!--'%s'(%s) is running...\n\n-->
+	<Item id="234" expr="\n'%s' 就完成了。\n"/><!--\n'%s' is done.\n-->
+	<Item id="235" expr="无法加载文件"/><!--Can not load the file.-->
+	<Item id="236" expr="它是第一次執行，或者執行環境已更改，系統設置是在管理員權限下嘗試的。"/><!--It is the first execution, or the execution environment is changed, and the system setting is tried with the administrator's authority.-->
+	<!--menu : Screeen buffer-->
+	<Item id="1000" expr="文件(&F)"/><!--File(&F)-->
+	<Item id="1001" expr="從文件中加載(&L)"/><!--Loading from file(&L)-->
+	<Item id="1002" expr="保存到文件(&S)"/><!--Save to file(&S)-->
+	<Item id="1003" expr="調整到1:1的比例"/><!--Fit to 1:1 scale-->
+	<Item id="1004" expr="適合屏幕"/><!--Fit to screen-->
+	<Item id="1005" expr="抗鋸齒"/><!--Antialiasing-->
+	<Item id="1006" expr="同步"/><!--Synchronize-->
+</string>

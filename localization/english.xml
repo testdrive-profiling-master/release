@@ -1,0 +1,68 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<string>
+	<!--word-->
+	<Item id="0" expr="TestDrive"/>
+	<Item id="1" expr="Option"/>
+	<Item id="2" expr="System"/>
+	<Item id="3" expr="Language"/>
+	<Item id="4" expr="Error"/>
+	<Item id="5" expr="Warning"/>
+	<Item id="6" expr="Line"/>
+	<Item id="7" expr="Profile"/>
+	<Item id="8" expr="Profile View"/>
+	<Item id="9" expr="Output"/>
+	<Item id="10" expr="Document"/>
+	<Item id="11" expr="Properties"/>
+	<Item id="12" expr="Properties View"/>
+	<Item id="13" expr="Set main title"/>
+	<Item id="14" expr="Set sub title"/>
+	<Item id="15" expr="System"/>
+	<Item id="16" expr="Application"/>
+	<Item id="17" expr="Warning/Error"/>
+	<!--message-->
+	<Item id="200" expr="Try to update document(%s)..."/>
+	<Item id="201" expr="Document(%s) update is done."/>
+	<Item id="202" expr="When you restart the program, the selected language will be applied."/>
+	<Item id="203" expr="Your command can not be performed, because current project is locked."/>
+	<Item id="204" expr="No Project"/>
+	<Item id="205" expr="Found too many recursive calls!"/>
+	<Item id="206" expr="Open your project, first!"/>
+	<Item id="207" expr="Another profile is running!"/>
+	<Item id="208" expr="No profile name is existed!"/>
+	<Item id="209" expr="Invalid file path."/>
+	<Item id="210" expr="Can't open the project file."/>
+	<Item id="211" expr="Error is occured in progress."/>
+	<Item id="212" expr="Stopped by user request."/>
+	<Item id="213" expr="Create memory model : "/>
+	<Item id="214" expr="Too big memory allocation."/>
+	<Item id="215" expr="The memory model with the same name already exists."/>
+	<Item id="216" expr="Not exist memory model."/>
+	<Item id="217" expr="Invalid color type has been specified!"/>
+	<Item id="218" expr="Load memory from image"/>
+	<Item id="219" expr="Load memory from binary file"/>
+	<Item id="220" expr="Store image from memory"/>
+	<Item id="221" expr="Store binary file from memory"/>
+	<Item id="222" expr="Specified document('%s') title('%s') is duplicated."/>
+	<Item id="223" expr="Can't load this project.&#xA;Please check error message on output log.&#xA;We'll close the project now."/>
+	<Item id="224" expr="Invalid command."/>
+	<Item id="225" expr="'%s' Document is locked from another document or system implementation. So it's reserved current state."/>
+	<Item id="226" expr="Can't load a library. : %s"/>
+	<Item id="227" expr="Can't find a document entry-point function('RegisterDocument')."/>
+	<Item id="228" expr="Command :"/>
+	<Item id="229" expr="Document is locked."/>
+	<Item id="230" expr="Document access has been denied."/>
+	<Item id="231" expr="'%s' document is hide status."/>
+	<Item id="232" expr="'%s' document is not found."/>
+	<Item id="233" expr="'%s'(%s) is running...\n\n"/>
+	<Item id="234" expr="\n'%s' is done.\n"/>
+	<Item id="235" expr="Can not load the file."/>
+	<Item id="236" expr="It is the first execution, or the execution environment is changed, and the system setting is tried with the administrator's authority."/>
+	<!--menu : Screeen buffer-->
+	<Item id="1000" expr="File(&F)"/>
+	<Item id="1001" expr="Loading from file(&L)"/>
+	<Item id="1002" expr="Save to file(&S)"/>
+	<Item id="1003" expr="Fit to 1:1 scale"/>
+	<Item id="1004" expr="Fit to screen"/>
+	<Item id="1005" expr="Antialiasing"/>
+	<Item id="1006" expr="Synchronize"/>
+</string>
