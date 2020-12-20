@@ -32,7 +32,7 @@
 // OF SUCH DAMAGE.
 // 
 // Title : TestDrive system
-// Rev.  : 11/5/2019 Tue (clonextop@gmail.com)
+// Rev.  : 12/20/2020 Sun (clonextop@gmail.com)
 //================================================================================
 #ifndef __TESTDRIVER_H__
 #define __TESTDRIVER_H__
@@ -46,9 +46,14 @@
 #ifdef USE_VERILATOR
 	#include "verilated.h"
 	#include "verilated_dpi.h"
-	#include "verilated_vcd_c.h"
+#ifdef SIM_TRACE
+#ifdef SIM_TRACE_FILE_OUTPUT
 	#include "verilated_fst_c.h"
+#else
+	#include "verilated_vcd_c.h"
 	#include "verilated_vcd_gtkwave.h"
+#endif
+#endif
 	#include "verilated_threads.h"
 #endif
 
