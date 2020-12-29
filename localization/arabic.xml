@@ -1,0 +1,68 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<string>
+	<!--word-->
+	<Item id="0" expr="TestDrive"/><!--TestDrive-->
+	<Item id="1" expr="اختيار"/><!--Option-->
+	<Item id="2" expr="النظام"/><!--System-->
+	<Item id="3" expr="لغة"/><!--Language-->
+	<Item id="4" expr="خطأ"/><!--Error-->
+	<Item id="5" expr="تحذير"/><!--Warning-->
+	<Item id="6" expr="خط"/><!--Line-->
+	<Item id="7" expr="الملف الشخصي"/><!--Profile-->
+	<Item id="8" expr="عرض الملف الشخصي"/><!--Profile View-->
+	<Item id="9" expr="انتاج |"/><!--Output-->
+	<Item id="10" expr="وثيقة"/><!--Document-->
+	<Item id="11" expr="الخصائص"/><!--Properties-->
+	<Item id="12" expr="عرض الخصائص"/><!--Properties View-->
+	<Item id="13" expr="حدد العنوان الرئيسي"/><!--Set main title-->
+	<Item id="14" expr="حدد العنوان الفرعي"/><!--Set sub title-->
+	<Item id="15" expr="النظام"/><!--System-->
+	<Item id="16" expr="تطبيق"/><!--Application-->
+	<Item id="17" expr="تحذير / خطأ"/><!--Warning/Error-->
+	<!--message-->
+	<Item id="200" expr="حاول تحديث المستند (%s) ..."/><!--Try to update document(%s)...-->
+	<Item id="201" expr="تم تحديث المستند (%s)."/><!--Document(%s) update is done.-->
+	<Item id="202" expr="عند إعادة تشغيل البرنامج ، سيتم تطبيق اللغة المحددة."/><!--When you restart the program, the selected language will be applied.-->
+	<Item id="203" expr="لا يمكن تنفيذ الأمر الخاص بك ، لأن المشروع الحالي مؤمن."/><!--Your command can not be performed, because current project is locked.-->
+	<Item id="204" expr="لا يوجد مشروع"/><!--No Project-->
+	<Item id="205" expr="تم العثور على عدد كبير جدًا من المكالمات المتكررة"/><!--Found too many recursive calls!-->
+	<Item id="206" expr="افتح مشروعك أولا!"/><!--Open your project, first!-->
+	<Item id="207" expr="ملف تعريف آخر قيد التشغيل!"/><!--Another profile is running!-->
+	<Item id="208" expr="لا يوجد اسم ملف شخصي موجود!"/><!--No profile name is existed!-->
+	<Item id="209" expr="مسار الملف غير صالح."/><!--Invalid file path.-->
+	<Item id="210" expr="لا يمكن فتح ملف المشروع."/><!--Can't open the project file.-->
+	<Item id="211" expr="حدث خطأ في التقدم."/><!--Error is occured in progress.-->
+	<Item id="212" expr="توقف بناء على طلب المستخدم"/><!--Stopped by user request.-->
+	<Item id="213" expr="إنشاء نموذج ذاكرة:"/><!--Create memory model : -->
+	<Item id="214" expr="تخصيص ذاكرة كبيرة جدًا."/><!--Too big memory allocation.-->
+	<Item id="215" expr="نموذج الذاكرة الذي يحمل نفس الاسم موجود بالفعل."/><!--The memory model with the same name already exists.-->
+	<Item id="216" expr="نموذج ذاكرة غير موجود."/><!--Not exist memory model.-->
+	<Item id="217" expr="تم تحديد نوع لون غير صالح!"/><!--Invalid color type has been specified!-->
+	<Item id="218" expr="تحميل الذاكرة من الصورة"/><!--Load memory from image-->
+	<Item id="219" expr="تحميل الذاكرة من ملف ثنائي"/><!--Load memory from binary file-->
+	<Item id="220" expr="تخزين الصورة من الذاكرة"/><!--Store image from memory-->
+	<Item id="221" expr="تخزين الملف الثنائي من الذاكرة"/><!--Store binary file from memory-->
+	<Item id="222" expr="تم تكرار عنوان المستند المحدد ('%s') ('%s')."/><!--Specified document('%s') title('%s') is duplicated.-->
+	<Item id="223" expr="لا يمكن تحميل هذا المشروع. \ n الرجاء التحقق من رسالة الخطأ في سجل الإخراج. \ n سنغلق المشروع الآن."/><!--Can't load this project.\nPlease check error message on output log.\nWe'll close the project now.-->
+	<Item id="224" expr="أمر خاطئ."/><!--Invalid command.-->
+	<Item id="225" expr="المستند '%s' مؤمن من مستند آخر أو تطبيق نظام. لذلك فهي محفوظة الحالة الحالية."/><!--'%s' Document is locked from another document or system implementation. So it's reserved current state.-->
+	<Item id="226" expr="لا يمكن تحميل مكتبة. : %s"/><!--Can't load a library. : %s-->
+	<Item id="227" expr="لا يمكن العثور على وظيفة نقطة إدخال المستند ("RegisterDocument")."/><!--Can't find a document entry-point function('RegisterDocument').-->
+	<Item id="228" expr="أمر :"/><!--Command :-->
+	<Item id="229" expr="المستند مقفل."/><!--Document is locked.-->
+	<Item id="230" expr="تم رفض الوصول إلى المستند."/><!--Document access has been denied.-->
+	<Item id="231" expr="وثيقة '%s' هي حالة إخفاء."/><!--'%s' document is hide status.-->
+	<Item id="232" expr="لم يتم العثور على مستند '%s'."/><!--'%s' document is not found.-->
+	<Item id="233" expr="يتم تشغيل '%s' (%s) ...\n\n"/><!--'%s'(%s) is running...\n\n-->
+	<Item id="234" expr="\nتم '%s'.\n"/><!--\n'%s' is done.\n-->
+	<Item id="235" expr="لا يمكن تحميل الملف."/><!--Can not load the file.-->
+	<Item id="236" expr="هذا هو التنفيذ الأول ، أو يتم تغيير بيئة التنفيذ ، ويتم تجربة إعداد النظام مع سلطة المسؤول."/><!--It is the first execution, or the execution environment is changed, and the system setting is tried with the administrator's authority.-->
+	<!--menu : Screeen buffer-->
+	<Item id="1000" expr="ملف(&F)"/><!--File(&F)-->
+	<Item id="1001" expr="تحميل من ملف(&L)"/><!--Loading from file(&L)-->
+	<Item id="1002" expr="احفظ الملف(&S)"/><!--Save to file(&S)-->
+	<Item id="1003" expr="تناسب مقياس 1: 1"/><!--Fit to 1:1 scale-->
+	<Item id="1004" expr="تناسب الشاشة"/><!--Fit to screen-->
+	<Item id="1005" expr="الحواف"/><!--Antialiasing-->
+	<Item id="1006" expr="تزامن"/><!--Synchronize-->
+</string>

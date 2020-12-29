@@ -2,6 +2,7 @@
 <Localization>
 	<!--
 	-->
+	<language name="الْعَرَبيّة" lang_id="1" sublang_id="1" file="arabic.xml"/>
 	<language name="中文简体" lang_id="4" sublang_id="2" file="chinese_simplified.xml"/>
 	<language name="中文繁體" lang_id="1211396" sublang_id="1" file="chinese_traditional.xml"/>
 	<language name="Deutsch" lang_id="7" sublang_id="1" file="german.xml"/>
