@@ -74,6 +74,8 @@ usr\bin\sed "s/class VerilatedVcdFile final/class VerilatedVcdFile/" < mingw64\s
 move /Y verilated_vcd_c.h mingw64\share\verilator\include\
 
 del /Q msys_mingw_install temp.sh
+
+mklink usr\bin\istyle.exe ..\istyle.exe
 cd ..
 
 :END
