@@ -90,6 +90,6 @@ del eclipse.zip
 :CHECK_SVEDITOR
 IF EXIST "eclipse\plugins\net.sf.sveditor*" goto END
 @echo Installing SVEditor eclipse plugin...
-eclipse\eclipsec.exe -clean -purgeHistory -application org.eclipse.equinox.p2.director -noSplash -repository http://sveditor.sourceforge.net/update/,http://download.eclipse.org/releases/photon/ -installIU net.sf.sveditor.feature.group
+eclipse\eclipsec.exe -clean -purgeHistory -application org.eclipse.equinox.p2.director -noSplash -repository http://sveditor.sourceforge.net/update/,http://download.eclipse.org/releases/latest/ -installIU net.sf.sveditor.feature.group
 
 :END
