@@ -44,6 +44,7 @@
 #include <tchar.h>
 
 #ifdef USE_VERILATOR
+	#define _POSIX_THREAD_SAFE_FUNCTIONS
 	#include "verilated.h"
 	#include "verilated_dpi.h"
 #ifdef SIM_TRACE
