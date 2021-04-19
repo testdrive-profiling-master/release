@@ -46,6 +46,7 @@ pacman -S --noconfirm mingw-w64-x86_64-openal
 pacman -S --noconfirm mingw-w64-x86_64-libvorbis
 pacman -S --noconfirm mingw-w64-x86_64-ngspice
 pacman -S --noconfirm mingw-w64-x86_64-iverilog
+pacman -S --noconfirm mingw-w64-x86_64-xlsxio
 
 cd /mingw64/bin
 ln -s mingw32-make.exe make.exe
