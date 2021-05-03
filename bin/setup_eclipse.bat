@@ -84,12 +84,12 @@ goto END
 :UNZIP_ECLIPSE
 %TESTDRIVE_DIR%bin\unzip.exe eclipse.zip
 del eclipse.zip
-@rem 주의 %는 %% 2개 연달아 써야 함.
-@rem curl -L http://downloads.sourceforge.net/project/veditor/development%%20build/net.sourceforge.veditor_1.2.1.c.jar -o eclipse\plugins\net.sourceforge.veditor_1.2.1.c.jar
 
 :CHECK_SVEDITOR
 IF EXIST "eclipse\plugins\net.sf.sveditor*" goto END
 @echo Installing SVEditor eclipse plugin...
-eclipse\eclipsec.exe -clean -purgeHistory -application org.eclipse.equinox.p2.director -noSplash -repository http://sveditor.sourceforge.net/update/,http://download.eclipse.org/releases/latest/ -installIU net.sf.sveditor.feature.group
-
+curl -L https://pilotfiber.dl.sourceforge.net/project/sveditor/sveditor/2.1.5/sveditor-2.1.5.jar -o sveditor-2.1.5.jar
+eclipse\eclipsec.exe -clean -purgeHistory -application org.eclipse.equinox.p2.director -noSplash -repository jar:file:sveditor-2.1.5.jar!/,http://download.eclipse.org/releases/latest/ -installIU net.sf.sveditor.feature.group
+@rem eclipse\eclipsec.exe -clean -purgeHistory -application org.eclipse.equinox.p2.director -noSplash -repository http://sveditor.sourceforge.net/update/,http://download.eclipse.org/releases/latest/ -installIU net.sf.sveditor.feature.group
+rm -f sveditor-2.1.5.jar
 :END
