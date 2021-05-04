@@ -89,7 +89,12 @@ del eclipse.zip
 IF EXIST "eclipse\plugins\net.sf.sveditor*" goto END
 @echo Installing SVEditor eclipse plugin...
 curl -L https://pilotfiber.dl.sourceforge.net/project/sveditor/sveditor/2.1.5/sveditor-2.1.5.jar -o sveditor-2.1.5.jar
+if not exist "sveditor-2.1.5.jar" goto INSTALL_SVEDITOR_FROM_REPO
+@echo Invoke installing SVEditor to eclipse...
 eclipse\eclipsec.exe -clean -purgeHistory -application org.eclipse.equinox.p2.director -noSplash -repository jar:file:sveditor-2.1.5.jar!/,http://download.eclipse.org/releases/latest/ -installIU net.sf.sveditor.feature.group
-@rem eclipse\eclipsec.exe -clean -purgeHistory -application org.eclipse.equinox.p2.director -noSplash -repository http://sveditor.sourceforge.net/update/,http://download.eclipse.org/releases/latest/ -installIU net.sf.sveditor.feature.group
 rm -f sveditor-2.1.5.jar
+goto END
+:INSTALL_SVEDITOR_FROM_REPO
+eclipse\eclipsec.exe -clean -purgeHistory -application org.eclipse.equinox.p2.director -noSplash -repository http://sveditor.sourceforge.net/update/,http://download.eclipse.org/releases/latest/ -installIU net.sf.sveditor.feature.group
+
 :END
