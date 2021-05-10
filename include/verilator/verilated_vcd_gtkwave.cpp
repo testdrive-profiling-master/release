@@ -32,7 +32,7 @@
 // OF SUCH DAMAGE.
 // 
 // Title : Testbench
-// Rev.  : 2/4/2021 Thu (clonextop@gmail.com)
+// Rev.  : 5/10/2021 Mon (clonextop@gmail.com)
 //================================================================================
 #include "verilated_vcd_gtkwave.h"
 // VerilatedVcdGtkWave
@@ -115,7 +115,7 @@ bool VerilatedVcdGTKWave::open(const std::string& name)
 		{
 			std::string sCmd("\"");
 			sCmd	+= sTestDrivePath;
-			sCmd	+= "bin\\msys64\\mingw64\\bin\\gtkwave-gtk2\" -r \"";
+			sCmd	+= "bin\\msys64\\mingw64\\bin\\gtkwave\" -r \"";
 			sCmd	+= sTestDrivePath;
 			sCmd	+= "bin\\gtkwave.ini\" -v -I ";
 
