@@ -17,6 +17,7 @@ pacman -S --noconfirm automake
 pacman -S --noconfirm mingw-w64-i686-gcc-libs
 pacman -S --noconfirm msys2-w32api-headers
 pacman -S --noconfirm msys2-w32api-runtime
+pacman -S --noconfirm mingw-w64-x86_64-argtable
 pacman -S --noconfirm mingw-w64-x86_64-gtk2
 pacman -S --noconfirm mingw-w64-x86_64-wget
 pacman -S --noconfirm mingw-w64-x86_64-libconfig
