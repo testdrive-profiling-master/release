@@ -46,6 +46,7 @@ echo pacman -Sy --noconfirm>> temp.sh
 usr\bin\bash --login /temp.sh
 
 echo export LANG="en_US.ANSI"> temp.sh
+echo pacman -Sy --noconfirm>> temp.sh
 echo pacman -Syu --noconfirm>> temp.sh
 usr\bin\bash --login /temp.sh
 usr\bin\bash --login /temp.sh
@@ -54,6 +55,7 @@ copy ..\msys_mingw_install .
 usr\bin\bash --login /msys_mingw_install
 
 echo export LANG="en_US.ANSI"> temp.sh
+echo pacman -Sy --noconfirm>> temp.sh
 echo pacman -Syu --noconfirm>> temp.sh
 usr\bin\bash --login /temp.sh
 usr\bin\bash --login /temp.sh

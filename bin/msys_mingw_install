@@ -1,5 +1,5 @@
 export LANG="en_US.ANSI"
-
+pacman -Sy
 pacman -S --noconfirm zip
 pacman -S --noconfirm unzip
 pacman -S --noconfirm gperf
