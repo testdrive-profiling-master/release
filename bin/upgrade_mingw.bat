@@ -28,6 +28,7 @@ if exist ".\var\lib\pacman\db.lck" rm .\var\lib\pacman\db.lck
 IF EXIST var\cache\pacman\pkg\*.pkg.tar.xz del /Q var\cache\pacman\pkg\*.pkg.tar.xz
 
 echo export LANG="en_US.ANSI"> temp.sh
+echo pacman -Sy --noconfirm>> temp.sh
 echo pacman -Syu --noconfirm>> temp.sh
 echo pacman -Scc --noconfirm>> temp.sh
 for /f "delims= " %%i in ('dir/o-d/tw usr\bin\pacman.exe ^| findstr pacman.exe') do set old_pacman_date=%%i
