@@ -40,9 +40,6 @@ if %old_pacman_date% == %new_pacman_date% goto DONE
 @echo *********************************************
 usr\bin\bash --login /temp.sh
 
-@rem verilator fix
-@rem usr\bin\sed -i "s/class VerilatedVcdFile final/class VerilatedVcdFile/" < mingw64\share\verilator\include\verilated_vcd_c.h
-
 :DONE
 cd ..
 @echo Done!
