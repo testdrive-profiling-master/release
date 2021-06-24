@@ -71,13 +71,8 @@ usr\bin\bash --login /temp.sh
 usr\bin\sed "s/: files db/: files/" < etc\nsswitch.conf > nsswitch.conf
 move /Y nsswitch.conf etc\
 
-@rem verilator fix
-usr\bin\sed "s/class VerilatedVcdFile final/class VerilatedVcdFile/" < mingw64\share\verilator\include\verilated_vcd_c.h > verilated_vcd_c.h
-move /Y verilated_vcd_c.h mingw64\share\verilator\include\
-
 del /Q msys_mingw_install temp.sh
 
-mklink usr\bin\istyle.exe ..\istyle.exe
 cd ..
 
 :END
