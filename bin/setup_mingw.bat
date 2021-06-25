@@ -72,6 +72,7 @@ usr\bin\sed "s/: files db/: files/" < etc\nsswitch.conf > nsswitch.conf
 move /Y nsswitch.conf etc\
 
 del /Q msys_mingw_install temp.sh
+copy /Y ..\gtkwave.ini .\mingw64\bin\
 
 cd ..
 
