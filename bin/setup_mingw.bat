@@ -18,7 +18,7 @@ rmdir /S /Q msys64
 )
 
 :MSYS2_CHECK
-IF NOT EXIST "msys64\mingw64.exe" goto MSYS2_INSTALL
+IF NOT EXIST "msys64\ucrt64.exe" goto MSYS2_INSTALL
 goto END
 
 :MSYS2_INSTALL
@@ -34,9 +34,9 @@ xz -d msys2.tar.xz
 IF NOT EXIST "msys2.tar" goto END
 tar xvf msys2.tar
 del msys2.tar
-IF NOT EXIST "msys64\mingw64.exe" goto END
+IF NOT EXIST "msys64\ucrt64.exe" goto END
 
-:MINGW64_INSTALL
+:UCRT64_INSTALL
 cd msys64
 echo exit > temp.sh
 usr\bin\bash --login /temp.sh
@@ -73,6 +73,7 @@ move /Y nsswitch.conf etc\
 
 del /Q msys_mingw_install temp.sh
 copy /Y ..\gtkwave.ini .\mingw64\bin\
+copy /Y ..\gtkwave.ini .\ucrt64\bin\
 
 cd ..
 
