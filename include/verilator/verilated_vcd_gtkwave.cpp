@@ -1,8 +1,7 @@
 //================================================================================
 // Copyright (c) 2013 ~ 2021. HyungKi Jeong(clonextop@gmail.com)
-// All rights reserved.
-// 
-// The 3-Clause BSD License (https://opensource.org/licenses/BSD-3-Clause)
+// Freely available under the terms of the 3-Clause BSD License
+// (https://opensource.org/licenses/BSD-3-Clause)
 // 
 // Redistribution and use in source and binary forms,
 // with or without modification, are permitted provided
@@ -31,8 +30,8 @@
 // ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
 // OF SUCH DAMAGE.
 // 
-// Title : Testbench
-// Rev.  : 5/10/2021 Mon (clonextop@gmail.com)
+// Title : Simulation HDL module
+// Rev.  : 8/8/2021 Sun (clonextop@gmail.com)
 //================================================================================
 #include "verilated_vcd_gtkwave.h"
 // VerilatedVcdGtkWave
@@ -115,7 +114,7 @@ bool VerilatedVcdGTKWave::open(const std::string& name)
 		{
 			std::string sCmd("\"");
 			sCmd	+= sTestDrivePath;
-			sCmd	+= "bin\\msys64\\mingw64\\bin\\gtkwave\" -r \"";
+			sCmd	+= "bin\\msys64\\ucrt64\\bin\\gtkwave\" -r \"";
 			sCmd	+= sTestDrivePath;
 			sCmd	+= "bin\\gtkwave.ini\" -v -I ";
 

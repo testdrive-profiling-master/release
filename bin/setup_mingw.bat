@@ -9,7 +9,7 @@ goto END
 cd %TESTDRIVE_DIR%bin
 
 :MSYS2_REINSTALL_CHECK
-IF NOT EXIST "msys64\mingw64\bin\ccache.exe" goto MSYS2_REINSTALL
+IF NOT EXIST "msys64\ucrt64\bin\ccache.exe" goto MSYS2_REINSTALL
 goto MSYS2_CHECK
 :MSYS2_REINSTALL
 echo *** Please wait for "MinGW" reinstallation... ***
@@ -72,7 +72,6 @@ usr\bin\sed "s/: files db/: files/" < etc\nsswitch.conf > nsswitch.conf
 move /Y nsswitch.conf etc\
 
 del /Q msys_mingw_install temp.sh
-copy /Y ..\gtkwave.ini .\mingw64\bin\
 copy /Y ..\gtkwave.ini .\ucrt64\bin\
 
 cd ..
