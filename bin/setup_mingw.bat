@@ -68,8 +68,8 @@ echo mkpasswd -l -c ^> /etc/passwd >> temp.sh
 echo mkgroup -l -c ^> /etc/group >> temp.sh
 usr\bin\bash --login /temp.sh
 
-usr\bin\sed "s/: files db/: files/" < etc\nsswitch.conf > nsswitch.conf
-move /Y nsswitch.conf etc\
+usr\bin\sed -i "s/: files db/: files/" < etc/nsswitch.conf
+usr\bin\sed -i "s;/ucrt64/;../;" ucrt64/share/ngspice/scripts/spinit
 
 del /Q msys_mingw_install temp.sh
 copy /Y ..\gtkwave.ini .\ucrt64\bin\
