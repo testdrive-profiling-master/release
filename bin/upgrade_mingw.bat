@@ -40,6 +40,9 @@ if %old_pacman_date% == %new_pacman_date% goto DONE
 @echo *********************************************
 usr\bin\bash --login /temp.sh
 
+@rem delete me~
+usr\bin\sed -i "s;/ucrt64/;../;" ucrt64/share/ngspice/scripts/spinit
+
 :DONE
 cd ..
 @echo Done!
