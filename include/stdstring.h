@@ -3312,7 +3312,7 @@ public:
 	}
 
 #ifndef SS_ANSI
-	void FormatMessage(PCMYSTR szFormat, ...) throw(std::exception)
+	void FormatMessage(PCMYSTR szFormat, ...)// throw(std::exception)
 	{
 		va_list argList;
 		va_start(argList, szFormat);
@@ -3329,7 +3329,7 @@ public:
 		va_end(argList);
 	}
 
-	void FormatMessage(UINT nFormatId, ...) throw(std::exception)
+	void FormatMessage(UINT nFormatId, ...)// throw(std::exception)
 	{
 		MYTYPE sFormat;
 		VERIFY(sFormat.LoadString(nFormatId));
