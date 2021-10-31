@@ -31,7 +31,7 @@
 // OF SUCH DAMAGE.
 // 
 // Title : Simulation HDL module
-// Rev.  : 8/8/2021 Sun (clonextop@gmail.com)
+// Rev.  : 10/31/2021 Sun (clonextop@gmail.com)
 //================================================================================
 #include "verilated_vcd_gtkwave.h"
 // VerilatedVcdGtkWave
@@ -138,7 +138,7 @@ bool VerilatedVcdGTKWave::open(const std::string& name)
 				si.hStdInput	= NULL;
 				si.hStdError	= NULL;
 				si.wShowWindow	= SW_SHOWMAXIMIZED;
-				CreateProcess(NULL, (LPSTR)sCmd.c_str(), NULL, NULL, TRUE, CREATE_NO_WINDOW, NULL, NULL, &si, &pi);
+				CreateProcess(NULL, (LPSTR)sCmd.c_str(), NULL, NULL, FALSE, CREATE_NO_WINDOW, NULL, NULL, &si, &pi);
 				CloseHandle(pi.hThread);
 				CloseHandle(pi.hProcess);
 			}
