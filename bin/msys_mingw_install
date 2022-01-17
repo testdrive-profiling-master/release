@@ -11,7 +11,7 @@ pacman -S --noconfirm expect
 pacman -S --noconfirm bison
 pacman -S --noconfirm flex
 pacman -S --noconfirm patch
-pacman -S --noconfirm autoconf
+pacman -S --noconfirm autoconf-wrapper
 pacman -S --noconfirm libtool
 pacman -S --noconfirm automake
 pacman -S --noconfirm msys2-w32api-headers
