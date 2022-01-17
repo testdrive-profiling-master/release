@@ -13,7 +13,7 @@ pacman -S --noconfirm flex
 pacman -S --noconfirm patch
 pacman -S --noconfirm autoconf-wrapper
 pacman -S --noconfirm libtool
-pacman -S --noconfirm automake
+pacman -S --noconfirm automake-wrapper
 pacman -S --noconfirm msys2-w32api-headers
 pacman -S --noconfirm msys2-w32api-runtime
 
