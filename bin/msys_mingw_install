@@ -55,7 +55,7 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-iverilog
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-xlsxio
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-minizip-git
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-libmicrohttpd
-
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-imagemagick
 cd /ucrt64/bin
 ln -s mingw32-make.exe make.exe
 ccache -c
