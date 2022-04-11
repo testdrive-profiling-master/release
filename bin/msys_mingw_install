@@ -3,10 +3,9 @@ pacman -Sy
 pacman -S --noconfirm zip
 pacman -S --noconfirm unzip
 pacman -S --noconfirm gperf
-pacman -S --noconfirm perl
 pacman -S --noconfirm tar
-pacman -S --noconfirm liblzo2-devel
 pacman -S --noconfirm liblzma
+pacman -S --noconfirm liblzo2-devel
 pacman -S --noconfirm expect
 pacman -S --noconfirm bison
 pacman -S --noconfirm flex
@@ -20,7 +19,6 @@ pacman -S --noconfirm msys2-w32api-runtime
 pacman -S --noconfirm mingw-w64-i686-gcc-libs
 
 pacman -S --noconfirm mingw-w64-x86_64-putty
-
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-zlib
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-gmp
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-gtk2
