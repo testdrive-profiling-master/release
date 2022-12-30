@@ -24,8 +24,8 @@ goto END
 :MSYS2_INSTALL
 echo Installing MSYS2 for TestDrive...
 
-@rem ToolsAutoDownload.exe mingw
-wget --no-check-certificate "https://github.com/msys2/msys2-installer/releases/download/nightly-x86_64/msys2-base-x86_64-latest.tar.xz" -O msys2.tar.xz
+ToolsAutoDownload.exe mingw
+@rem wget --no-check-certificate "https://github.com/msys2/msys2-installer/releases/download/nightly-x86_64/msys2-base-x86_64-latest.tar.xz" -O msys2.tar.xz
 IF EXIST "msys2.tar.xz" goto MSYS2_DECOMPRESS
 echo *E: Can't download MSYS2
 goto END

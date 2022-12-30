@@ -57,7 +57,5 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-kicad
 cd /ucrt64/bin
 ln -s mingw32-make.exe make.exe
 ccache -c
-cd core_perl
-pl2bat perldoc
 cd /
 exit
