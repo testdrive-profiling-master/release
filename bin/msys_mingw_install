@@ -12,7 +12,6 @@ pacman -S --noconfirm flex
 pacman -S --noconfirm patch
 pacman -S --noconfirm autoconf-wrapper
 pacman -S --noconfirm libtool
-pacman -S --noconfirm git
 pacman -S --noconfirm automake-wrapper
 pacman -S --noconfirm msys2-w32api-headers
 pacman -S --noconfirm msys2-w32api-runtime
@@ -41,6 +40,7 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-cppcheck
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-boost
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-python
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-http-parser
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-libgit2
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-astyle
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-gtkwave
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-verilator
