@@ -1,8 +1,7 @@
 //================================================================================
-// Copyright (c) 2013 ~ 2019. HyungKi Jeong(clonextop@gmail.com)
-// All rights reserved.
-// 
-// The 3-Clause BSD License (https://opensource.org/licenses/BSD-3-Clause)
+// Copyright (c) 2013 ~ 2023. HyungKi Jeong(clonextop@gmail.com)
+// Freely available under the terms of the 3-Clause BSD License
+// (https://opensource.org/licenses/BSD-3-Clause)
 // 
 // Redistribution and use in source and binary forms,
 // with or without modification, are permitted provided
@@ -32,7 +31,7 @@
 // OF SUCH DAMAGE.
 // 
 // Title : TestDrive system
-// Rev.  : 12/20/2020 Sun (clonextop@gmail.com)
+// Rev.  : 2/2/2023 Thu (clonextop@gmail.com)
 //================================================================================
 #ifndef __TESTDRIVER_H__
 #define __TESTDRIVER_H__
@@ -40,7 +39,7 @@
 #ifndef WIN32_LEAN_AND_MEAN
 #define WIN32_LEAN_AND_MEAN
 #endif
-#include <ObjBase.h>
+#include <windows.h>
 #include <tchar.h>
 
 #ifdef USE_VERILATOR
@@ -62,14 +61,14 @@ typedef struct{
 	DWORD	UserConfig[1023];
 }TESTDRIVE_CONFIG;
 
-interface ITestDriverMemory{
-	STDMETHOD_(DWORD, GetSize)(void) PURE;											// get memory byte size
-	STDMETHOD_(BOOL, IsValidAddress)(DWORD dwAddress) PURE;							// get address validation
-	STDMETHOD_(BYTE*, GetPointer)(DWORD dwAddress = 0, DWORD dwSize = 0) PURE;		// get pointer from address and size definition
-	STDMETHOD_(void, Flush)(DWORD dwAddress, DWORD dwSize) PURE;					// flush paged memory
-	STDMETHOD_(TESTDRIVE_CONFIG*, GetConfig)(void) PURE;							// get configuration
-	STDMETHOD_(LPCTSTR, GetName)(void) PURE;										// get memory name
-	STDMETHOD_(void, Release)(void) PURE;											// release this object
+struct ITestDriverMemory{
+	virtual DWORD GetSize(void) = 0;											// get memory byte size
+	virtual BOOL IsValidAddress(DWORD dwAddress) = 0;							// get address validation
+	virtual BYTE* GetPointer(DWORD dwAddress = 0, DWORD dwSize = 0) = 0;		// get pointer from address and size definition
+	virtual void Flush(DWORD dwAddress, DWORD dwSize) = 0;						// flush paged memory
+	virtual TESTDRIVE_CONFIG* GetConfig(void) = 0;								// get configuration
+	virtual LPCTSTR GetName(void) = 0;											// get memory name
+	virtual void Release(void) = 0;												// release this object
 };
 
 ITestDriverMemory* TestDriver_GetMemory(LPCTSTR memory_name = NULL, DWORD dwDefaultByteSize = 0);			// if memory_name is null, 'TESTDRIVE_MEMORY_MAPPED' memory will be returned.
