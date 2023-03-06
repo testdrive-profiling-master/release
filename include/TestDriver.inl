@@ -99,13 +99,13 @@ ITestDriverMemory* TestDriver_GetMemory(LPCTSTR memory_name, DWORD dwDefaultByte
 	TestDriverMemory*	pMemory = TestDriverMemory::GetHead();
 	if(!memory_name) memory_name = MMFileName;
 
-	// 기존 메모리에서 검색해서 찾기
+	// Find by searching in existing memory
 	while(pMemory){
 		if(!_tcscmp(pMemory->GetName(), memory_name)) return pMemory;
 		pMemory	= pMemory->GetNext();
 	}
 
-	// 없으면 생성 시도
+	// If not, try to create
 	{
 		pMemory = new TestDriverMemory(memory_name, dwDefaultByteSize);
 		if(pMemory->IsValidAddress(0)) return pMemory;
@@ -125,12 +125,12 @@ TestDriverMemory::TestDriverMemory(LPCTSTR memory_name, DWORD dwDefaultByteSize)
 	*m_sName		= NULL;
 
 	if(memory_name){
-		{	// 메모리 핸들 찾기
+		{	// Find memory handle
 			m_hMapHandle	= OpenFileMapping(FILE_MAP_ALL_ACCESS, false, memory_name);
 			if(!m_hMapHandle){
 				if(!dwDefaultByteSize) return;
 				
-				// 새로 생성
+				// newly create
 				if(m_hMapHandle = CreateFileMapping(INVALID_HANDLE_VALUE,
 					NULL,
 					PAGE_READWRITE,
@@ -145,7 +145,7 @@ TestDriverMemory::TestDriverMemory(LPCTSTR memory_name, DWORD dwDefaultByteSize)
 				}else return;
 			}
 		}
-		{	// 메모리 맵핑을 위한 채크
+		{	// Check for memory mapping
 			m_pConfig		= (TESTDRIVE_CONFIG*)MapViewOfFile(m_hMapHandle, FILE_MAP_ALL_ACCESS, 0, 0, sizeof(TESTDRIVE_CONFIG));
 			if(!m_pConfig){
 				CloseHandle(m_hMapHandle);
@@ -155,7 +155,7 @@ TestDriverMemory::TestDriverMemory(LPCTSTR memory_name, DWORD dwDefaultByteSize)
 			m_dwByteSize	= m_pConfig->dwMemorySize;
 			UnmapViewOfFile(m_pConfig);
 		}
-		{	// 메모리 원래 크기로 할당
+		{	// Allocate the original size of memory
 			m_pConfig		= (TESTDRIVE_CONFIG*)MapViewOfFile(m_hMapHandle, FILE_MAP_ALL_ACCESS, 0, 0, sizeof(TESTDRIVE_CONFIG) + m_dwByteSize);
 			m_pMemoryBase	= ((BYTE*)m_pConfig) + sizeof(TESTDRIVE_CONFIG);
 		}
