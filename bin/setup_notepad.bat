@@ -41,10 +41,12 @@ goto END
 %TESTDRIVE_DIR%bin\unzip.exe notepad.zip -d notepad
 del notepad.zip
 
-@rem %의 경우 %%을 2번 사용해야 함을 기억해야 함.
-curl -L https://sourceforge.net/projects/npp-plugins/files/Hex%20Editor/Hex%20Editor%20Plugin%20v0.9.5/HexEditor_0_9_5_UNI_dll.zip -o hexedit.zip
-
+wget -O hexedit.zip https://sourceforge.net/projects/npp-plugins/files/Hex%%20Editor/Hex%%20Editor%%20Plugin%%20v0.9.5/HexEditor_0_9_5_UNI_dll.zip/download?use_mirror=voxel
 %TESTDRIVE_DIR%bin\unzip.exe hexedit.zip -d notepad/plugins
 del hexedit.zip
+
+wget -O xml_tools.zip https://sourceforge.net/projects/npp-plugins/files/XML%%20Tools/Xml%%20Tools%%202.4.9%%20Unicode/Xml%%20Tools%%202.4.9.2%%20x64%%20Unicode.zip/download?use_mirror=voxel
+%TESTDRIVE_DIR%bin\unzip.exe xml_tools.zip -d notepad/plugins
+del xml_tools.zip
 
 :END
