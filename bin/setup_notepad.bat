@@ -41,7 +41,7 @@ goto END
 %TESTDRIVE_DIR%bin\unzip.exe notepad.zip -d notepad
 del notepad.zip
 
-@rem %ì˜ ê²½ìš° %%ì„ 2ë²ˆ ì‚¬ìš©í•´ì•¼ í•¨ì„ ê¸°ì–µí•´ì•¼ í•¨.
+@rem %ÀÇ °æ¿ì %%À» 2¹ø »ç¿ëÇØ¾ß ÇÔÀ» ±â¾ïÇØ¾ß ÇÔ.
 curl -L http://jaist.dl.sourceforge.net/project/npp-plugins/Hex%20Editor/Hex%20Editor%20Plugin%20v0.9.5/HexEditor_0_9_5_UNI_dll.zip -o hexedit.zip
 %TESTDRIVE_DIR%bin\unzip.exe hexedit.zip -d notepad/plugins
 del hexedit.zip
