@@ -42,7 +42,8 @@ goto END
 del notepad.zip
 
 @rem %의 경우 %%을 2번 사용해야 함을 기억해야 함.
-curl -L http://jaist.dl.sourceforge.net/project/npp-plugins/Hex%20Editor/Hex%20Editor%20Plugin%20v0.9.5/HexEditor_0_9_5_UNI_dll.zip -o hexedit.zip
+curl -L https://sourceforge.net/projects/npp-plugins/files/Hex%20Editor/Hex%20Editor%20Plugin%20v0.9.5/HexEditor_0_9_5_UNI_dll.zip -o hexedit.zip
+
 %TESTDRIVE_DIR%bin\unzip.exe hexedit.zip -d notepad/plugins
 del hexedit.zip
 
