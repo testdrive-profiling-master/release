@@ -57,13 +57,13 @@ class TestDriverMemory :
 	public ITestDriverMemory
 {
 public:
-	TestDriverMemory(LPCTSTR memory_name, DWORD dwDefaultByteSize = 0);
+	TestDriverMemory(LPCTSTR memory_name, uint64_t dwDefaultByteSize = 0);
 	~TestDriverMemory(void);
 
-	virtual DWORD GetSize(void);												// get memory byte size
-	virtual BOOL IsValidAddress(DWORD dwAddress);								// get address validation
-	virtual BYTE* GetPointer(DWORD dwAddress = 0, DWORD dwSize = 0);			// get pointer from address and size definition
-	virtual void Flush(DWORD dwAddress, DWORD dwSize);							// flush paged memory
+	virtual uint64_t GetSize(void);												// get memory byte size
+	virtual BOOL IsValidAddress(uint64_t dwAddress);								// get address validation
+	virtual BYTE* GetPointer(uint64_t dwAddress = 0, uint64_t dwSize = 0);		// get pointer from address and size definition
+	virtual void Flush(uint64_t dwAddress, uint64_t dwSize);						// flush paged memory
 	virtual TESTDRIVE_CONFIG* GetConfig(void);									// get configuration
 	virtual LPCTSTR GetName(void);												// get memory name
 	virtual void Release(void);													// release this object
@@ -75,7 +75,7 @@ public:
 protected:
 	TCHAR				m_sName[1024];
 	HANDLE				m_hMapHandle;
-	DWORD				m_dwByteSize;
+	uint64_t				m_dwByteSize;
 	TestDriverMemory*	m_pNext;
 	TESTDRIVE_CONFIG*	m_pConfig;
 	BYTE*				m_pMemoryBase;
@@ -95,7 +95,7 @@ TestDriverMemory* TestDriverMemory::GetHead(void){
 	return m_pMemoryHead;
 }
 
-ITestDriverMemory* TestDriver_GetMemory(LPCTSTR memory_name, DWORD dwDefaultByteSize){
+ITestDriverMemory* TestDriver_GetMemory(LPCTSTR memory_name, uint64_t dwDefaultByteSize){
 	TestDriverMemory*	pMemory = TestDriverMemory::GetHead();
 	if(!memory_name) memory_name = MMFileName;
 
@@ -114,7 +114,7 @@ ITestDriverMemory* TestDriver_GetMemory(LPCTSTR memory_name, DWORD dwDefaultByte
 	return NULL;
 }
 
-TestDriverMemory::TestDriverMemory(LPCTSTR memory_name, DWORD dwDefaultByteSize){
+TestDriverMemory::TestDriverMemory(LPCTSTR memory_name, uint64_t dwDefaultByteSize){
 	m_pNext = m_pMemoryHead;
 	m_pMemoryHead = this;
 
@@ -126,6 +126,7 @@ TestDriverMemory::TestDriverMemory(LPCTSTR memory_name, DWORD dwDefaultByteSize)
 
 	if(memory_name){
 		{	// Find memory handle
+			uint64_t		mapped_size = dwDefaultByteSize + sizeof(TESTDRIVE_CONFIG);
 			m_hMapHandle	= OpenFileMapping(FILE_MAP_ALL_ACCESS, false, memory_name);
 			if(!m_hMapHandle){
 				if(!dwDefaultByteSize) return;
@@ -134,8 +135,8 @@ TestDriverMemory::TestDriverMemory(LPCTSTR memory_name, DWORD dwDefaultByteSize)
 				if(m_hMapHandle = CreateFileMapping(INVALID_HANDLE_VALUE,
 					NULL,
 					PAGE_READWRITE,
-					0,
-					dwDefaultByteSize + sizeof(TESTDRIVE_CONFIG),
+					(mapped_size >> 32) & 0xFFFFFFFF,
+					mapped_size & 0xFFFFFFFF,
 					memory_name))
 				{
 					
@@ -193,22 +194,22 @@ void TestDriverMemory::Release(void){
 	delete this;
 }
 
-DWORD TestDriverMemory::GetSize(void){
+uint64_t TestDriverMemory::GetSize(void){
 	return m_dwByteSize;
 }
 
-BOOL TestDriverMemory::IsValidAddress(DWORD dwAddress){
+BOOL TestDriverMemory::IsValidAddress(uint64_t dwAddress){
 	return (dwAddress < m_dwByteSize);
 }
 
-BYTE* TestDriverMemory::GetPointer(DWORD dwAddress, DWORD dwByteSize){
+BYTE* TestDriverMemory::GetPointer(uint64_t dwAddress, uint64_t dwByteSize){
 	if(!m_pMemoryBase || (dwAddress+dwByteSize) > m_dwByteSize) return NULL;
 	return (m_pMemoryBase + dwAddress);
 }
 
-void TestDriverMemory::Flush(DWORD dwAddress, DWORD dwSize){
+void TestDriverMemory::Flush(uint64_t dwAddress, uint64_t dwSize){
 	BYTE* pMem	= GetPointer(dwAddress, dwSize);
-	if(pMem) FlushViewOfFile((LPCVOID)pMem, (SIZE_T)dwSize);
+	if(pMem) FlushViewOfFile((LPCVOID)pMem, dwSize);
 }
 
 TESTDRIVE_CONFIG* TestDriverMemory::GetConfig(void){

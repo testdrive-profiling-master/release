@@ -57,21 +57,21 @@
 #endif
 
 typedef struct{
-	DWORD	dwMemorySize;
-	DWORD	UserConfig[1023];
+	uint64_t		dwMemorySize;
+	uint32_t		UserConfig[1022];
 }TESTDRIVE_CONFIG;
 
 struct ITestDriverMemory{
-	virtual DWORD GetSize(void) = 0;											// get memory byte size
-	virtual BOOL IsValidAddress(DWORD dwAddress) = 0;							// get address validation
-	virtual BYTE* GetPointer(DWORD dwAddress = 0, DWORD dwSize = 0) = 0;		// get pointer from address and size definition
-	virtual void Flush(DWORD dwAddress, DWORD dwSize) = 0;						// flush paged memory
+	virtual uint64_t GetSize(void) = 0;											// get memory byte size
+	virtual BOOL IsValidAddress(uint64_t dwAddress) = 0;							// get address validation
+	virtual BYTE* GetPointer(uint64_t dwAddress = 0, uint64_t dwSize = 0) = 0;	// get pointer from address and size definition
+	virtual void Flush(uint64_t dwAddress, uint64_t dwSize) = 0;						// flush paged memory
 	virtual TESTDRIVE_CONFIG* GetConfig(void) = 0;								// get configuration
 	virtual LPCTSTR GetName(void) = 0;											// get memory name
 	virtual void Release(void) = 0;												// release this object
 };
 
-ITestDriverMemory* TestDriver_GetMemory(LPCTSTR memory_name = NULL, DWORD dwDefaultByteSize = 0);			// if memory_name is null, 'TESTDRIVE_MEMORY_MAPPED' memory will be returned.
+ITestDriverMemory* TestDriver_GetMemory(LPCTSTR memory_name = NULL, uint64_t dwDefaultByteSize = 0);			// if memory_name is null, 'TESTDRIVE_MEMORY_MAPPED' memory will be returned.
 
 void TestDriver_Cleanup(void);	// must call this at the last
 

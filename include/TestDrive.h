@@ -455,8 +455,8 @@ interface ITDDocument;
 class ITDImplSystem;
 
 typedef struct{
-	DWORD	dwMemorySize;
-	DWORD	UserConfig[1023];
+	uint64_t		dwMemorySize;
+	uint32_t		UserConfig[1022];
 }TESTDRIVE_CONFIG;
 
 // System memory interface
@@ -471,16 +471,16 @@ interface ITDMemory{
 		MEM_DISC_TEXT,
 	} MEM_DISC;
 
-	STDMETHOD_(BOOL, Create)(DWORD size, LPCTSTR lpszName = NULL) PURE;	// create system memory with size
+	STDMETHOD_(BOOL, Create)(uint64_t dwByteSize, LPCTSTR lpszName = NULL) PURE;	// create system memory with size
 	STDMETHOD_(void, Release)(void) PURE;							// delete system memory
 	STDMETHOD_(BOOL, IsInitialized)(void) PURE;						// is system memory existed?
-	STDMETHOD_(DWORD, GetSize)(void) PURE;							// get memory byte size
-	STDMETHOD_(BOOL, IsValidAddress)(DWORD dwAddress) PURE;			// get address validation
-	STDMETHOD_(BYTE*, GetPointer)(DWORD dwAddress = 0, DWORD dwSize = 0) PURE;		// get pointer from address and size definition
-	STDMETHOD_(BOOL, Load)(MEM_DISC disc, LPCTSTR lpszFileName, DWORD offset) PURE;	// set memory from description file
-	STDMETHOD_(BOOL, Save)(MEM_DISC disc, LPCTSTR lpszFileName, DWORD offset, DWORD size, DWORD stride = 0) PURE;	// save memory to file
-	STDMETHOD_(BOOL, LoadImage)(LPCTSTR lpszFileName, DWORD dwOffset, COLORFORMAT iColorType, DWORD stride = 0) PURE;	// load memory from image file
-	STDMETHOD_(BOOL, StoreImage)(LPCTSTR lpszFileName, DWORD dwOffset,  DWORD dwWidth, DWORD dwHeight, COLORFORMAT iColorType, BOOL bStoreAlpha = FALSE, DWORD stride = 0) PURE;	// save memory to image file
+	STDMETHOD_(uint64_t, GetSize)(void) PURE;						// get memory byte size
+	STDMETHOD_(BOOL, IsValidAddress)(uint64_t dwAddress) PURE;		// get address validation
+	STDMETHOD_(BYTE*, GetPointer)(uint64_t dwAddress = 0, uint64_t dwSize = 0) PURE;		// get pointer from address and size definition
+	STDMETHOD_(BOOL, Load)(MEM_DISC disc, LPCTSTR lpszFileName, uint64_t offset) PURE;	// set memory from description file
+	STDMETHOD_(BOOL, Save)(MEM_DISC disc, LPCTSTR lpszFileName, uint64_t offset, uint64_t size, DWORD stride = 0) PURE;	// save memory to file
+	STDMETHOD_(BOOL, LoadImage)(LPCTSTR lpszFileName, uint64_t dwOffset, COLORFORMAT iColorType, DWORD stride = 0) PURE;	// load memory from image file
+	STDMETHOD_(BOOL, StoreImage)(LPCTSTR lpszFileName, uint64_t dwOffset,  DWORD dwWidth, DWORD dwHeight, COLORFORMAT iColorType, BOOL bStoreAlpha = FALSE, DWORD stride = 0) PURE;	// save memory to image file
 	STDMETHOD_(TESTDRIVE_CONFIG*, GetConfig)(void) PURE;
 	STDMETHOD_(LPCTSTR, GetName)(void) PURE;
 };
