@@ -41,6 +41,7 @@
 #endif
 #include <windows.h>
 #include <tchar.h>
+#include <stdint.h>
 
 #ifdef USE_VERILATOR
 	#include "verilated.h"
