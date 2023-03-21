@@ -636,7 +636,7 @@ interface ITDDocument{
 	STDMETHOD_(ITDBuffer*, CreateBuffer)(LPCTSTR lpszName, int x, int y, int width, int height) PURE;		// create buffer object
 	STDMETHOD_(ITDReport*, CreateReport)(LPCTSTR lpszName, int x, int y, int width, int height) PURE;		// create report object
 	STDMETHOD_(ITDButton*, CreateButton)(LPCTSTR lpszName, int x, int y, int width, int height) PURE;		// create button object
-	STDMETHOD_(ITDHtml*, CreateHtml)(LPCTSTR lpszName, int x, int y, int width, int height) PURE;			// create HTML object
+	STDMETHOD_(ITDHtml*, CreateHtml)(LPCTSTR lpszName, int x, int y, int width, int height, BOOL bWebView2 = FALSE) PURE;			// create HTML object
 
 	STDMETHOD_(void, Lock)(void) PURE;		// lock this document and reference count++
 	STDMETHOD_(void, UnLock)(void) PURE;	// unlock this document and reference count--
