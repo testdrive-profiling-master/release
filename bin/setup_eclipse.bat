@@ -65,7 +65,7 @@ endlocal
 :ECLIPSE_CHECK
 if not exist ".\eclipse\eclipse.exe" goto CHECK_DIRECTORY
 
-goto CHECK_SVEDITOR
+goto END
 
 :CHECK_DIRECTORY
 if exist eclipse (
@@ -85,16 +85,11 @@ goto END
 %TESTDRIVE_DIR%bin\unzip.exe eclipse.zip
 del eclipse.zip
 
-:CHECK_SVEDITOR
-IF EXIST "eclipse\plugins\net.sf.sveditor*" goto END
-@echo Installing SVEditor eclipse plugin...
-curl -L https://sourceforge.net/projects/sveditor/files/sveditor/2.1.5/sveditor-2.1.5.jar -o sveditor-2.1.5.jar
-if not exist "sveditor-2.1.5.jar" goto INSTALL_SVEDITOR_FROM_REPO
-@echo Invoke installing SVEditor to eclipse...
-eclipse\eclipsec.exe -clean -purgeHistory -application org.eclipse.equinox.p2.director -noSplash -repository jar:file:sveditor-2.1.5.jar!/,http://download.eclipse.org/releases/latest/ -installIU net.sf.sveditor.feature.group
-rm -f sveditor-2.1.5.jar
-goto END
-:INSTALL_SVEDITOR_FROM_REPO
-eclipse\eclipsec.exe -clean -purgeHistory -application org.eclipse.equinox.p2.director -noSplash -repository http://sveditor.sourceforge.net/update/,http://download.eclipse.org/releases/latest/ -installIU net.sf.sveditor.feature.group
+@echo *** Installing SVEditor eclipse plugin...
+eclipse\eclipsec.exe -clean -purgeHistory -application org.eclipse.equinox.p2.director -noSplash -repository https://sveditor.github.io/update/,http://download.eclipse.org/releases/latest/ -installIU org.sveditor.feature.group,org.sveditor.source.feature.group
+@echo *** Installing Javascript/HTML/XML eclipse plugin...
+eclipse\eclipsec.exe -clean -purgeHistory -application org.eclipse.equinox.p2.director -noSplash -repository http://download.eclipse.org/releases/latest/ -installIU org.eclipse.wst.web_ui.feature.feature.group,org.eclipse.wildwebdeveloper.feature.feature.group
+@echo *** Installing GIT eclipse plugin...
+eclipse\eclipsec.exe -clean -purgeHistory -application org.eclipse.equinox.p2.director -noSplash -repository http://download.eclipse.org/releases/latest/ -installIU org.eclipse.egit.feature.group
 
 :END
