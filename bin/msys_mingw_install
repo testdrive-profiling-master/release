@@ -56,6 +56,8 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-minizip-git
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-libmicrohttpd
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-imagemagick
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-kicad
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-graphviz
+
 cd /ucrt64/bin
 ln -s mingw32-make.exe make.exe
 ccache -c
