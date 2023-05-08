@@ -42,6 +42,7 @@
 
 #ifndef TESTDRIVE_ENTRY
 #include <tchar.h>
+#include <cstdint>
 #include "stdstring.h"
 #define CString		CStdString
 #define CStringA	CStdStringA
