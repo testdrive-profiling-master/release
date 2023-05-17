@@ -41,12 +41,17 @@ goto END
 %TESTDRIVE_DIR%bin\unzip.exe notepad.zip -d notepad
 del notepad.zip
 
-wget -O hexedit.zip https://sourceforge.net/projects/npp-plugins/files/Hex%%20Editor/Hex%%20Editor%%20Plugin%%20v0.9.5/HexEditor_0_9_5_UNI_dll.zip/download?use_mirror=voxel
+@rem plug-in list https://raw.githubusercontent.com/notepad-plus-plus/nppPluginList/master/src/pl.x64.json
+
+wget -O hexedit.zip https://github.com/chcg/NPP_HexEdit/releases/download/0.9.12/HexEditor_0.9.12_x64.zip
 %TESTDRIVE_DIR%bin\unzip.exe hexedit.zip -d notepad/plugins
 del hexedit.zip
 
-wget -O xml_tools.zip https://sourceforge.net/projects/npp-plugins/files/XML%%20Tools/Xml%%20Tools%%202.4.9%%20Unicode/Xml%%20Tools%%202.4.9.2%%20x64%%20Unicode.zip/download?use_mirror=voxel
+wget -O xml_tools.zip https://github.com/morbac/xmltools/releases/download/3.1.1.13/XMLTools-3.1.1.13-x64.zip
 %TESTDRIVE_DIR%bin\unzip.exe xml_tools.zip -d notepad/plugins
 del xml_tools.zip
+
+wget -O Explorer.zip https://github.com/oviradoi/npp-explorer-plugin/releases/download/v1.9.9/Explorer_x64.zip
+%TESTDRIVE_DIR%bin\unzip.exe Explorer.zip -d notepad/plugins
 
 :END
