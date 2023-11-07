@@ -344,6 +344,7 @@ interface ITDHtmlManager{
 	STDMETHOD_(LPCTSTR, OnHtmlBeforeNavigate)(DWORD dwID, LPCTSTR lpszURL) PURE;//{return lpszURL;};
 	STDMETHOD_(void, OnHtmlDocumentComplete)(DWORD dwID, LPCTSTR lpszURL) PURE;//
 	STDMETHOD_(LPCTSTR, OnHtmlWebMessageReceived)(DWORD dwID, LPCTSTR lpszMessage) { return NULL; }	// html2 only
+	STDMETHOD_(LPCTSTR, OnHtmlNewWindowRequest)(DWORD dwID, LPCTSTR lpszURL, BOOL bUserInitiated) { return bUserInitiated ? lpszURL : NULL/* adblock */; }	// html2 only
 };
 
 // Terminal interface

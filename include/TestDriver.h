@@ -36,6 +36,7 @@
 #ifndef __TESTDRIVER_H__
 #define __TESTDRIVER_H__
 
+#ifdef WIN32
 #ifndef WIN32_LEAN_AND_MEAN
 #define WIN32_LEAN_AND_MEAN
 #endif
@@ -75,5 +76,6 @@ struct ITestDriverMemory{
 ITestDriverMemory* TestDriver_GetMemory(LPCTSTR memory_name = NULL, uint64_t dwDefaultByteSize = 0);			// if memory_name is null, 'TESTDRIVE_MEMORY_MAPPED' memory will be returned.
 
 void TestDriver_Cleanup(void);	// must call this at the last
+#endif//WIN32
 
-#endif //__TESTDRIVER_H__
+#endif//__TESTDRIVER_H__

@@ -34,7 +34,6 @@
 // Rev.  : 2/2/2023 Thu (clonextop@gmail.com)
 //================================================================================
 #include "TestDriver.h"
-#include <windows.h>
 
 #ifdef USE_VERILATOR
 	#include <shellapi.h>
