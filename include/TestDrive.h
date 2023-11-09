@@ -567,6 +567,11 @@ interface ITDSystem{
 	STDMETHOD_(BOOL, InsertCodeInception)(LPCTSTR lpszTargetFile, LPCTSTR lpszInceptionFile, LPCTSTR lpszTitle = NULL, LPCTSTR lpszAuthor = NULL, LPCTSTR lpszVersion = NULL) PURE;	// insert code inception to source file
 	STDMETHOD_(BOOL, ReplaceText)(LPCTSTR lpszTargetFile, LPCTSTR lpszReplaceDescFile) PURE;	// replace strings with replace files
 	STDMETHOD_(BOOL, SearchSubPathFile)(LPCTSTR sSearchPath, LPCTSTR sFileName, SEARCH_FILE_FUNCTION SearchFunc, LPVOID pData) PURE;	// search sub-tree path
+
+	STDMETHOD_(int, GetConfigInt)(LPCTSTR sKey, int iDefault = 0) PURE;
+	STDMETHOD_(void, SetConfigInt)(LPCTSTR sKey, int iData) PURE;
+	STDMETHOD_(CString, GetConfigString)(LPCTSTR sKey) PURE;
+	STDMETHOD_(void, SetConfigString)(LPCTSTR sKey, LPCTSTR sData) PURE;
 };
 
 // Property data common interface
