@@ -570,7 +570,7 @@ interface ITDSystem{
 
 	STDMETHOD_(int, GetConfigInt)(LPCTSTR sKey, int iDefault = 0) PURE;
 	STDMETHOD_(void, SetConfigInt)(LPCTSTR sKey, int iData) PURE;
-	STDMETHOD_(CString, GetConfigString)(LPCTSTR sKey) PURE;
+	STDMETHOD_(LPCTSTR, GetConfigString)(LPCTSTR sKey) PURE;
 	STDMETHOD_(void, SetConfigString)(LPCTSTR sKey, LPCTSTR sData) PURE;
 };
 
