@@ -39,6 +39,8 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-opencv
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-cppcheck
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-boost
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-python
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-python-pip
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-python-pylint-venv
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-http-parser
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-libgit2
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-astyle
@@ -60,6 +62,12 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-graphviz
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-source-highlight
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-pybind11
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-yosys
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-scons
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-opencl-headers
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-opencl-icd
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-flatbuffers
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-enchant
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-nlohmann-json
 
 cd /ucrt64/bin
 ln -s mingw32-make.exe make.exe
