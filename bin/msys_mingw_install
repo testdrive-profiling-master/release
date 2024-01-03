@@ -16,8 +16,6 @@ pacman -S --noconfirm automake-wrapper
 pacman -S --noconfirm msys2-w32api-headers
 pacman -S --noconfirm msys2-w32api-runtime
 
-pacman -S --noconfirm mingw-w64-i686-gcc-libs
-
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-putty
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-zlib
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-gmp
@@ -31,6 +29,7 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-ccache
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-gcc
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-gdb
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-make
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-tbb
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-tcl
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-tk
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-libvorbis
@@ -41,6 +40,8 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-boost
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-python
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-python-pip
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-python-pylint-venv
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-python-wheel
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-cython
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-http-parser
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-libgit2
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-astyle
@@ -63,6 +64,7 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-source-highlight
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-pybind11
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-yosys
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-scons
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-opencl-clhpp
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-opencl-headers
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-opencl-icd
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-flatbuffers
