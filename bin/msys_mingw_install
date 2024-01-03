@@ -21,6 +21,7 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-zlib
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-gmp
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-gtk2
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-wget
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-gflags
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-libconfig
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-binutils
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-gcc-libs
@@ -39,6 +40,7 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-cppcheck
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-boost
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-python
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-python-pip
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-python-setuptools
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-python-pylint-venv
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-python-wheel
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-cython
