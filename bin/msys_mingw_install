@@ -43,6 +43,7 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-python-pip
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-python-setuptools
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-python-pylint-venv
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-python-wheel
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-python-sphinx
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-cython
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-http-parser
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-libgit2
