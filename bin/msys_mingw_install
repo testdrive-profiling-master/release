@@ -76,6 +76,7 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-flatbuffers
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-enchant
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-nlohmann-json
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-doxygen
+pacman -S --noconfirm mingw-w64-clang-x86_64-nodejs
 
 cd /ucrt64/bin
 ln -s mingw32-make.exe make.exe
