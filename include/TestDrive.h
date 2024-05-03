@@ -531,6 +531,7 @@ interface ITDSystem{
 		SYSMSG_INFO,
 		SYSMSG_WARNING,
 		SYSMSG_ERROR,
+		SYSMSG_NONE	= -1,
 	} SYSMSG_ID;
 
 	STDMETHOD_(DWORD, GetVersion)(void) PURE;											// get testdrive version. it must be equal to 'TESTDRIVE_VERSION'
