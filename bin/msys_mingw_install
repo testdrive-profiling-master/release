@@ -78,6 +78,7 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-nlohmann-json
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-doxygen
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-nodejs
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-lua-luarocks
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-pdf2djvu
 
 cd /ucrt64/bin
 ln -s mingw32-make.exe make.exe
