@@ -28,7 +28,7 @@ rmdir /S /Q notepad
 :DOWNLOAD_START
 
 @echo NotePad downloading...
-ToolsAutoDownload.exe notepad++
+ToolAutoDownload.exe notepad++
 
 if exist "notepad.zip" goto UNZIP_NOTEPAD
 

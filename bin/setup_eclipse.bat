@@ -47,7 +47,7 @@ for /f "delims=. tokens=1-3" %%v in ("%JAVAVER%") do (
 :JRE_INSTALLATION
 @echo Installing the newest JRE(Java Runtime Environment)...
 @echo Newest downloading the JRE(Java Runtime Environment)...
-ToolsAutoDownload.exe jre
+ToolAutoDownload.exe jre
 if not exist "jre.exe" (
 	@echo JRE can't not be downloaded. Please contact to me.
 	goto JRE_INSTALLATION_IS_DONE
@@ -75,7 +75,7 @@ rmdir /S /Q eclipse
 
 :DOWNLOAD_ECLIPSE
 @echo Downloading Eclipse...
-ToolsAutoDownload.exe eclipse
+ToolAutoDownload.exe eclipse
 if exist "eclipse.zip" goto UNZIP_ECLIPSE
 
 @echo Can't download Eclipse, please connect your PC to internet...
