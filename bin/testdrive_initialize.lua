@@ -1,17 +1,8 @@
-system.call "setup_mingw.bat", "", ".\\"
-system.call "setup_eclipse.bat", "", ".\\"
+-- lfs extension utils
+lfs.IsExist = function(path)
+	return (lfs.attributes(path) ~= nil)
+end
 
-if.file "notepad\\notepad++.exe"
-	// nothing to do...
-if.else
-	system.msg "[[[ System will download Notepad++. Please wait... ]]]\n\n"
-	system.call "setup_notepad.bat", "", ".\\"
-	system.msg "\nNotepad++ installation is done!\n"
-if.end
-
-
-#lua
--- initialization for TestDrive Profiling Master
 -- sort by key
 local function __collect_keys(t, sort)
 	local _k = {}
@@ -33,12 +24,18 @@ function key_pairs(t)
 	end
 end
 
--- lfs extension utils
---[[
-lfs.IsExist = function(path)
-	return (lfs.attributes(path) ~= nil)
+
+-------------------------------------------------------
+-- initialization for TestDrive Profiling Master
+-------------------------------------------------------
+System.Execute("setup_mingw.bat", "", ".\\", nil)
+System.Execute("setup_eclipse.bat", "", ".\\", nil)
+
+if lfs.IsExist("notepad\\notepad++.exe") == false then
+	LOGI("[[[ System will download Notepad++. Please wait... ]]]\n")
+	System.Execute("setup_notepad.bat", "", ".\\", nil)
+	LOGI("Notepad++ installation is done!\n")
 end
---]]
 
 -- Failure should be handled with an error
 function CreateMemory(mem_size, mem_name)
