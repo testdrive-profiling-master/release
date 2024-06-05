@@ -8,11 +8,6 @@ goto END
 :TESTDRIVE_EXIST
 cd %TESTDRIVE_DIR%bin
 
-if not exist ".\notepad\unicode\notepad++.exe" goto CHECK_EXIST
-@echo Deleting... too old notepad++
-taskkill /F /IM notepad++.exe
-rmdir /S /Q notepad
-
 :CHECK_EXIST
 if not exist ".\notepad\notepad++.exe" goto CHECK_DIRECTORY
 
@@ -27,7 +22,7 @@ rmdir /S /Q notepad
 
 :DOWNLOAD_START
 
-@echo NotePad downloading...
+@echo NotePad++ downloading...
 ToolAutoDownload.exe notepad++
 
 if exist "notepad.zip" goto UNZIP_NOTEPAD
@@ -44,5 +39,7 @@ del notepad.zip
 install_notepad_plugin HexEditor
 install_notepad_plugin XMLTools
 install_notepad_plugin Explorer
-
+install_notepad_plugin ComparePlugin
+install_notepad_plugin DSpellCheck
+install_notepad_plugin NppEditorConfig
 :END
