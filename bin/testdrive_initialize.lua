@@ -33,8 +33,30 @@ System.Execute("setup_eclipse.bat", "", ".\\", nil)
 
 if lfs.IsExist("notepad\\notepad++.exe") == false then
 	LOGI("[[[ System will download Notepad++. Please wait... ]]]\n")
-	System.Execute("setup_notepad.bat", "", ".\\", nil)
-	LOGI("Notepad++ installation is done!\n")
+	--System.Execute("setup_notepad.bat", "", ".\\", nil)
+	
+	if lfs.IsExist(".\\notepad\\") then
+		System.Execute("rmdir", "/S /Q notepad", ".\\", nil)
+		exec("rmdir /S /Q notepad")
+	end
+	
+	LOGI("NotePad++ downloading...")
+	System.Execute("ToolAutoDownload.exe", "notepad++", ".\\", nil)
+	
+	if lfs.IsExist("notepad.zip") then
+		System.Execute("unzip.exe", "notepad.zip -d notepad", ".\\", nil)
+		exec("del notepad.zip")
+		System.Execute("install_notepad_plugin", "HexEditor", ".\\", nil)
+		System.Execute("install_notepad_plugin", "XMLTools", ".\\", nil)
+		System.Execute("install_notepad_plugin", "Explorer", ".\\", nil)
+		System.Execute("install_notepad_plugin", "ComparePlugin", ".\\", nil)
+		System.Execute("install_notepad_plugin", "DSpellCheck", ".\\", nil)
+		System.Execute("install_notepad_plugin", "NppEditorConfig", ".\\", nil)
+		exec("codegen notepad++_postfix.lua")
+		LOGI("Notepad++ installation is done!\n")
+	else
+		LOGW("Notepad++ installation is failed!\n")
+	end
 end
 
 -- Failure should be handled with an error
