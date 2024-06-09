@@ -26,7 +26,7 @@ f:Close()
 
 
 -- update config.xml
-if f:Open("./bin/notepad/config.xml") == false then
+if f:Open("./notepad/config.xml") == false then
 	error("Can't open config file.")
 	os.exit(1)
 end
@@ -36,10 +36,10 @@ f:Close()
 
 iPos = s:find("\"globalOverride\"", 0)
 if iPos > 0 then
-	iStart = iStart + 16
-	local iEnd = s:find("/>", iStart) + 2
-	s:erase(iStart, (iEnd - iStart))
-	s:insert(iStart, "  fg=\"no\" bg=\"no\" font=\"yes\" fontSize=\"yes\" bold=\"yes\" italic=\"no\" underline=\"no\" />")
+	iPos = iPos + 16
+	local iEnd = s:find("/>", iPos) + 2
+	s:erase(iPos, (iEnd - iPos))
+	s:insert(iPos, " fg=\"no\" bg=\"no\" font=\"yes\" fontSize=\"yes\" bold=\"yes\" italic=\"no\" underline=\"no\" />")
 end
 
 f:Create("./notepad/config.xml")
