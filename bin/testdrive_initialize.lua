@@ -31,6 +31,11 @@ end
 System.Execute("setup_mingw.bat", "", ".\\", nil)
 System.Execute("setup_eclipse.bat", "", ".\\", nil)
 
+-- temporary
+if lfs.IsExist("msys64\\ucrt64\\lib\\libqrencode.dll.a") == false then
+	os.execute("pacman -S --noconfirm mingw-w64-ucrt-x86_64-qrencode")
+end
+
 if lfs.IsExist("notepad\\notepad++.exe") == false then
 	LOGI("[[[ System will download Notepad++. Please wait... ]]]\n")
 	--System.Execute("setup_notepad.bat", "", ".\\", nil)
