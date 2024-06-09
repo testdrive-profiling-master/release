@@ -1,5 +1,6 @@
 local f = TextFile()
 
+-- update model.xml
 if f:Open("./notepad/stylers.model.xml") == false then
 	error("Can't open style file.")
 	os.exit(1)
@@ -20,5 +21,27 @@ if iPos > 0 then
 end
 
 f:Create("./notepad/stylers.model.xml")
+f:Put(s.s)
+f:Close()
+
+
+-- update config.xml
+if f:Open("./bin/notepad/config.xml") == false then
+	error("Can't open config file.")
+	os.exit(1)
+end
+
+s = String(f:GetAll(false))
+f:Close()
+
+iPos = s:find("\"globalOverride\"", 0)
+if iPos > 0 then
+	iStart = iStart + 16
+	local iEnd = s:find("/>", iStart) + 2
+	s:erase(iStart, (iEnd - iStart))
+	s:insert(iStart, "  fg=\"no\" bg=\"no\" font=\"yes\" fontSize=\"yes\" bold=\"yes\" italic=\"no\" underline=\"no\" />")
+end
+
+f:Create("./notepad/config.xml")
 f:Put(s.s)
 f:Close()
