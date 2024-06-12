@@ -34,12 +34,21 @@ end
 s = String(f:GetAll(false))
 f:Close()
 
+-- fix for global font apply
 iPos = s:find("\"globalOverride\"", 0)
 if iPos > 0 then
 	iPos = iPos + 16
 	local iEnd = s:find("/>", iPos) + 2
 	s:erase(iPos, (iEnd - iPos))
 	s:insert(iPos, " fg=\"no\" bg=\"no\" font=\"yes\" fontSize=\"yes\" bold=\"yes\" italic=\"no\" underline=\"no\" />")
+end
+
+-- enable explorer
+iPos = s:find("<ActiveTabs cont=\"0\" activeTab=\"-1\" />", 0)
+if iPos > 0 then
+	s:erase(iPos, 38)
+	s:insert(iPos,	"<PluginDlg pluginName=\"Explorer.dll\" id=\"0\" curr=\"0\" prev=\"-1\" isVisible=\"yes\" />\n" ..
+					"            <ActiveTabs cont=\"0\" activeTab=\"0\" />")
 end
 
 f:Create("./notepad/config.xml")

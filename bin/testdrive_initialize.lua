@@ -25,39 +25,8 @@ function key_pairs(t)
 end
 
 -------------------------------------------------------
--- initialization for TestDrive Profiling Master
+-- Extra wrapper function
 -------------------------------------------------------
-System.Execute("setup_mingw.bat", "", ".\\", nil)
-System.Execute("setup_eclipse.bat", "", ".\\", nil)
-
-if lfs.IsExist("notepad\\notepad++.exe") == false then
-	LOGI("[[[ System will download Notepad++. Please wait... ]]]\n")
-	--System.Execute("setup_notepad.bat", "", ".\\", nil)
-	
-	if lfs.IsExist(".\\notepad\\") then
-		System.Execute("rmdir", "/S /Q notepad", ".\\", nil)
-		exec("rmdir /S /Q notepad")
-	end
-	
-	LOGI("NotePad++ downloading...")
-	System.Execute("ToolAutoDownload.exe", "notepad++", ".\\", nil)
-	
-	if lfs.IsExist("notepad.zip") then
-		System.Execute("unzip.exe", "notepad.zip -d notepad", ".\\", nil)
-		exec("del notepad.zip")
-		System.Execute("install_notepad_plugin", "HexEditor", ".\\", nil)
-		System.Execute("install_notepad_plugin", "XMLTools", ".\\", nil)
-		System.Execute("install_notepad_plugin", "Explorer", ".\\", nil)
-		System.Execute("install_notepad_plugin", "ComparePlugin", ".\\", nil)
-		System.Execute("install_notepad_plugin", "DSpellCheck", ".\\", nil)
-		System.Execute("install_notepad_plugin", "NppEditorConfig", ".\\", nil)
-		exec("codegen notepad++_postfix.lua")
-		LOGI("Notepad++ installation is done!\n")
-	else
-		LOGW("Notepad++ installation is failed!\n")
-	end
-end
-
 -- Failure should be handled with an error
 function CreateMemory(mem_size, mem_name)
 	if System.CreateMemory(mem_size, mem_name) == false then
@@ -71,6 +40,12 @@ function RunProfile(filename)
 		error("Can't Run profile script : " .. filename)
 	end
 end
+
+-------------------------------------------------------
+-- initialization for TestDrive Profiling Master
+-------------------------------------------------------
+System.Execute("setup_mingw.bat", "", ".\\", nil)
+System.Execute("setup_eclipse.bat", "", ".\\", nil)
 
 -------------------------------------------------------
 --check installed msys2 package
@@ -112,3 +87,34 @@ RequireMingwPackage("mingw-w64-ucrt-x86_64-source-highlight")		--
 RequireMingwPackage("mingw-w64-ucrt-x86_64-lua-luarocks")			--
 RequireMingwPackage("mingw-w64-ucrt-x86_64-pdf2djvu")				-- 2024/3
 RequireMingwPackage("mingw-w64-ucrt-x86_64-qrencode")				-- 2024/6
+
+
+-------------------------------------------------------
+-- check notepad++ installation
+-------------------------------------------------------
+if lfs.IsExist("notepad\\notepad++.exe") == false then
+	LOGI("[[[ System will download Notepad++. Please wait... ]]]\n")
+	
+	if lfs.IsExist(".\\notepad\\") then
+		System.Execute("rmdir", "/S /Q notepad", ".\\", nil)
+		exec("rmdir /S /Q notepad")
+	end
+	
+	LOGI("NotePad++ downloading...")
+	System.Execute("ToolAutoDownload.exe", "notepad++", ".\\", nil)
+	
+	if lfs.IsExist("notepad.zip") then
+		System.Execute("unzip.exe", "notepad.zip -d notepad", ".\\", nil)
+		exec("del notepad.zip")
+		System.Execute("install_notepad_plugin", "HexEditor", ".\\", nil)
+		System.Execute("install_notepad_plugin", "XMLTools", ".\\", nil)
+		System.Execute("install_notepad_plugin", "Explorer", ".\\", nil)
+		System.Execute("install_notepad_plugin", "ComparePlugin", ".\\", nil)
+		System.Execute("install_notepad_plugin", "DSpellCheck", ".\\", nil)
+		System.Execute("install_notepad_plugin", "NppEditorConfig", ".\\", nil)
+		exec("codegen notepad++_postfix.lua")
+		LOGI("Notepad++ installation is done!\n")
+	else
+		LOGW("Notepad++ installation is failed!\n")
+	end
+end
