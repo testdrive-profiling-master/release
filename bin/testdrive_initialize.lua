@@ -24,17 +24,11 @@ function key_pairs(t)
 	end
 end
 
-
 -------------------------------------------------------
 -- initialization for TestDrive Profiling Master
 -------------------------------------------------------
 System.Execute("setup_mingw.bat", "", ".\\", nil)
 System.Execute("setup_eclipse.bat", "", ".\\", nil)
-
--- temporary
-if lfs.IsExist("msys64\\ucrt64\\lib\\libqrencode.dll.a") == false then
-	os.execute("pacman -S --noconfirm mingw-w64-ucrt-x86_64-qrencode")
-end
 
 if lfs.IsExist("notepad\\notepad++.exe") == false then
 	LOGI("[[[ System will download Notepad++. Please wait... ]]]\n")
@@ -77,3 +71,44 @@ function RunProfile(filename)
 		error("Can't Run profile script : " .. filename)
 	end
 end
+
+-------------------------------------------------------
+--check installed msys2 package
+-------------------------------------------------------
+local __installed_package = {}
+do
+	local	sList	= String(exec("pacman -Q"))
+	
+	while (sList.TokenizePos >= 0) do
+		local	sPackage	= sList:Tokenize("\r\n")
+		sPackage:Trim(" ")
+		sPackage:CutBack(" ", true)
+		
+		if sPackage:Length() > 0 then
+			__installed_package[#__installed_package + 1] = sPackage.s
+		end
+	end
+end
+
+function RequireMingwPackage(package_name)
+	local bInstalled = false
+	for key,val in pairs(__installed_package) do
+		if val == package_name then
+			bInstalled	= true
+			break
+		end
+	end
+	
+	if bInstalled == false then
+		LOGI("Installing new requried package : " .. package_name)
+		System.Execute("pacman", "-S --noconfirm " .. package_name, ".\\msys64\\usr\\bin", nil)
+		__installed_package[#__installed_package + 1] = package_name
+	end
+end
+
+-- Most recent required package
+RequireMingwPackage("mingw-w64-ucrt-x86_64-graphviz")				-- 2024/1
+RequireMingwPackage("mingw-w64-ucrt-x86_64-source-highlight")		--
+RequireMingwPackage("mingw-w64-ucrt-x86_64-lua-luarocks")			--
+RequireMingwPackage("mingw-w64-ucrt-x86_64-pdf2djvu")				-- 2024/3
+RequireMingwPackage("mingw-w64-ucrt-x86_64-qrencode")				-- 2024/6
