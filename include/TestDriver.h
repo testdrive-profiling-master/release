@@ -1,23 +1,23 @@
 //================================================================================
-// Copyright (c) 2013 ~ 2023. HyungKi Jeong(clonextop@gmail.com)
+// Copyright (c) 2013 ~ 2024. HyungKi Jeong(clonextop@gmail.com)
 // Freely available under the terms of the 3-Clause BSD License
 // (https://opensource.org/licenses/BSD-3-Clause)
-// 
+//
 // Redistribution and use in source and binary forms,
 // with or without modification, are permitted provided
 // that the following conditions are met:
-// 
+//
 // 1. Redistributions of source code must retain the above copyright notice,
 //    this list of conditions and the following disclaimer.
-// 
+//
 // 2. Redistributions in binary form must reproduce the above copyright notice,
 //    this list of conditions and the following disclaimer in the documentation
 //    and/or other materials provided with the distribution.
-// 
+//
 // 3. Neither the name of the copyright holder nor the names of its contributors
 //    may be used to endorse or promote products derived from this software
 //    without specific prior written permission.
-// 
+//
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 // AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
 // THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
@@ -31,7 +31,7 @@
 // OF SUCH DAMAGE.
 // 
 // Title : TestDrive system
-// Rev.  : 2/2/2023 Thu (clonextop@gmail.com)
+// Rev.  : 6/27/2024 Thu (clonextop@gmail.com)
 //================================================================================
 #ifndef __TESTDRIVER_H__
 #define __TESTDRIVER_H__
@@ -59,21 +59,21 @@
 #endif
 
 typedef struct{
-	uint64_t		dwMemorySize;
+	uint64_t		ulMemorySize;
 	uint32_t		UserConfig[1022];
 }TESTDRIVE_CONFIG;
 
 struct ITestDriverMemory{
 	virtual uint64_t GetSize(void) = 0;											// get memory byte size
-	virtual BOOL IsValidAddress(uint64_t dwAddress) = 0;							// get address validation
-	virtual BYTE* GetPointer(uint64_t dwAddress = 0, uint64_t dwSize = 0) = 0;	// get pointer from address and size definition
-	virtual void Flush(uint64_t dwAddress, uint64_t dwSize) = 0;						// flush paged memory
+	virtual BOOL IsValidAddress(uint64_t ulAddress) = 0;						// get address validation
+	virtual BYTE* GetPointer(uint64_t ulAddress = 0, uint64_t ulSize = 0) = 0;	// get pointer from address and size definition
+	virtual void Flush(uint64_t ulAddress, uint64_t ulSize) = 0;				// flush paged memory
 	virtual TESTDRIVE_CONFIG* GetConfig(void) = 0;								// get configuration
 	virtual LPCTSTR GetName(void) = 0;											// get memory name
 	virtual void Release(void) = 0;												// release this object
 };
 
-ITestDriverMemory* TestDriver_GetMemory(LPCTSTR memory_name = NULL, uint64_t dwDefaultByteSize = 0);			// if memory_name is null, 'TESTDRIVE_MEMORY_MAPPED' memory will be returned.
+ITestDriverMemory* TestDriver_GetMemory(LPCTSTR memory_name = NULL, uint64_t ulDefaultByteSize = 0);			// if memory_name is null, 'TESTDRIVE_MEMORY_MAPPED' memory will be returned.
 
 void TestDriver_Cleanup(void);	// must call this at the last
 #endif//WIN32
