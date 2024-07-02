@@ -87,7 +87,7 @@ RequireMingwPackage("mingw-w64-ucrt-x86_64-source-highlight")		--
 RequireMingwPackage("mingw-w64-ucrt-x86_64-lua-luarocks")			--
 RequireMingwPackage("mingw-w64-ucrt-x86_64-pdf2djvu")				-- 2024/3
 RequireMingwPackage("mingw-w64-ucrt-x86_64-qrencode")				-- 2024/6
-
+RequireMingwPackage("mingw-w64-ucrt-x86_64-xmake")					-- 2024/7
 
 -------------------------------------------------------
 -- check notepad++ installation
