@@ -92,6 +92,7 @@ RequireMingwPackage("tree")											-- 2024/7
 RequireMingwPackage("whois")										-- 2024/7
 RequireMingwPackage("unrar")										-- 2024/7
 RequireMingwPackage("mingw-w64-ucrt-x86_64-libevent")				-- 2024/8
+RequireMingwPackage("mingw-w64-ucrt-x86_64-tgui")					-- 2024/8
 
 -------------------------------------------------------
 -- check notepad++ installation
