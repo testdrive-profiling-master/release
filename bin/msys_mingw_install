@@ -4,7 +4,6 @@ pacman -S --noconfirm tree
 pacman -S --noconfirm whois
 pacman -S --noconfirm zip
 pacman -S --noconfirm unzip
-pacman -S --noconfirm unrar
 pacman -S --noconfirm gperf
 pacman -S --noconfirm tar
 pacman -S --noconfirm liblzma
@@ -35,6 +34,7 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-gdb
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-make
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-tbb
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-tcl
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-tgui
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-tk
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-libevent
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-libvorbis
@@ -78,11 +78,13 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-opencl-headers
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-opencl-icd
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-flatbuffers
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-enchant
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-enet
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-nlohmann-json
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-doxygen
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-lua-luarocks
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-pdf2djvu
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-qrencode
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-unrar
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-xmake
 
 cd /ucrt64/bin
