@@ -97,11 +97,13 @@ RequireMingwPackage("mingw-w64-ucrt-x86_64-enet")					-- 2024/9
 
 do
 	local sRootPath = String()
+	local sToolPath = String()
+	
 	sRootPath:GetEnvironment("systemroot")
-	print("sRootPath : " .. sRootPath.s)
+	sToolPath:GetEnvironment("TESTDRIVE_DIR")
 
 	if lfs.IsExist(sRootPath.s .. "\\Fonts\\CascadiaMono.ttf") == false then
-		System.ElevatedExecute("install_extra_fonts.bat", nil, nil)
+		System.ElevatedExecute("install_extra_fonts.bat", nil, sToolPath.s	.. "bin")
 	end
 end
 
