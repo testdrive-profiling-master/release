@@ -95,18 +95,6 @@ RequireMingwPackage("mingw-w64-ucrt-x86_64-libevent")				-- 2024/8
 RequireMingwPackage("mingw-w64-ucrt-x86_64-tgui")					-- 2024/8
 RequireMingwPackage("mingw-w64-ucrt-x86_64-enet")					-- 2024/9
 
-do
-	local sRootPath = String()
-	local sToolPath = String()
-	
-	sRootPath:GetEnvironment("systemroot")
-	sToolPath:GetEnvironment("TESTDRIVE_DIR")
-
-	if lfs.IsExist(sRootPath.s .. "\\Fonts\\CascadiaMono.ttf") == false then
-		System.ElevatedExecute("install_extra_fonts.bat", nil, sToolPath.s	.. "bin")
-	end
-end
-
 -------------------------------------------------------
 -- check notepad++ installation
 -------------------------------------------------------
