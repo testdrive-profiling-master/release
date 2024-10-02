@@ -86,7 +86,7 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-pdf2djvu
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-qrencode
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-unrar
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-xmake
-pacman -S --noconfirm mingw-w64-clang-x86_64-nodejs
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-nodejs
 
 cd /ucrt64/bin
 ln -s mingw32-make.exe make.exe
