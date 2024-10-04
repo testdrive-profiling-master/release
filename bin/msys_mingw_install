@@ -22,6 +22,7 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-putty
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-zlib
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-gmp
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-gtk2
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-gtk3
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-wget
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-gflags
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-libconfig

@@ -96,6 +96,7 @@ RequireMingwPackage("mingw-w64-ucrt-x86_64-tgui")					-- 2024/8
 RequireMingwPackage("mingw-w64-ucrt-x86_64-enet")					-- 2024/9
 RequireMingwPackage("mingw-w64-ucrt-x86_64-nodejs")					-- 2024/10
 RequireMingwPackage("mingw-w64-ucrt-x86_64-7zip")
+RequireMingwPackage("mingw-w64-ucrt-x86_64-gtk3")
 
 -------------------------------------------------------
 -- check notepad++ installation
