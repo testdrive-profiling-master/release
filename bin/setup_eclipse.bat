@@ -91,5 +91,7 @@ eclipse\eclipsec.exe -clean -purgeHistory -application org.eclipse.equinox.p2.di
 eclipse\eclipsec.exe -clean -purgeHistory -application org.eclipse.equinox.p2.director -noSplash -repository http://download.eclipse.org/releases/latest/ -installIU org.eclipse.wst.web_ui.feature.feature.group,org.eclipse.wildwebdeveloper.feature.feature.group
 @echo *** Installing GIT eclipse plugin...
 eclipse\eclipsec.exe -clean -purgeHistory -application org.eclipse.equinox.p2.director -noSplash -repository http://download.eclipse.org/releases/latest/ -installIU org.eclipse.egit.feature.group
+@echo *** Installing cppstyle eclipse plugin...
+eclipse\eclipsec.exe -clean -purgeHistory -application org.eclipse.equinox.p2.director -noSplash -repository https://www.zhanwei.wang/CppStyle/update/,http://download.eclipse.org/releases/latest/ -installIU org.wangzw.cppstyle.feature.feature.group
 
 :END
