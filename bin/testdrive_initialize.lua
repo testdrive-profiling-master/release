@@ -98,7 +98,8 @@ RequireMingwPackage("mingw-w64-ucrt-x86_64-nodejs")					-- 2024/10
 RequireMingwPackage("mingw-w64-ucrt-x86_64-7zip")
 RequireMingwPackage("mingw-w64-ucrt-x86_64-gtk3")
 if lfs.IsExist(".\\msys64\\usr\\bin\\vue") == false then			-- 2024/11
-	System.Execute("npm", "install -g @vue/cli", ".\\msys64\\usr\\bin", nil)
+	LOGI("Installing Vue.js...")
+	System.Execute("npm.cmd", "install -g @vue/cli", ".\\msys64\\ucrt64\\bin", nil)
 end
 
 -------------------------------------------------------
