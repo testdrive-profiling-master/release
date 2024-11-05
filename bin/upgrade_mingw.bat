@@ -43,6 +43,8 @@ usr\bin\bash --login /temp.sh
 @rem delete me~
 usr\bin\sed -i "s;/ucrt64/;../;" ucrt64/share/ngspice/scripts/spinit
 
+ncu -u
+
 :DONE
 cd ..
 @echo Done!
