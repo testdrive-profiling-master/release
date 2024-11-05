@@ -97,6 +97,9 @@ RequireMingwPackage("mingw-w64-ucrt-x86_64-enet")					-- 2024/9
 RequireMingwPackage("mingw-w64-ucrt-x86_64-nodejs")					-- 2024/10
 RequireMingwPackage("mingw-w64-ucrt-x86_64-7zip")
 RequireMingwPackage("mingw-w64-ucrt-x86_64-gtk3")
+if lfs.IsExist(".\\msys64\\usr\\bin\\vue") == false then			-- 2024/11
+	System.Execute("npm", "install -g @vue/cli", ".\\msys64\\usr\\bin", nil)
+end
 
 -------------------------------------------------------
 -- check notepad++ installation
