@@ -94,6 +94,5 @@ cd /ucrt64/bin
 ln -s mingw32-make.exe make.exe
 ccache -c
 npm install -g npm-check-updates
-npm install -g @vue/cli
 cd /
 exit
