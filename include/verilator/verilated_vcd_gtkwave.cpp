@@ -80,11 +80,11 @@ bool VerilatedVcdGTKWave::open(const std::string& name)
 {
 	if(!m_bOpened) {
 		// run gtkwave
-		char sTestDrivePath[MAX_PATH];
+		char sProfilePath[MAX_PATH];
 		int pid	= _getpid();
 		{
 			// check TestDrive's 'GTKWave' path
-			if(!GetEnvironmentVariableA("TESTDRIVE_DIR", sTestDrivePath, MAX_PATH)) {
+			if(!GetEnvironmentVariableA("TESTDRIVE_PROFILE", sProfilePath, MAX_PATH)) {
 				MessageBox(NULL, TEXT("TestDrive is not installed normally."), TEXT("Warning"), MB_OK | MB_ICONHAND);
 				return false;
 			}
@@ -113,10 +113,10 @@ bool VerilatedVcdGTKWave::open(const std::string& name)
 		}
 		{
 			std::string sCmd("\"");
-			sCmd	+= sTestDrivePath;
-			sCmd	+= "bin\\msys64\\ucrt64\\bin\\gtkwave\" -r \"";
-			sCmd	+= sTestDrivePath;
-			sCmd	+= "bin\\gtkwave.ini\" -v -I ";
+			sCmd	+= sProfilePath;
+			sCmd	+= "Common\\bin\\gtkwave\" -r \"";
+			sCmd	+= sProfilePath;
+			sCmd	+= "Common\\bin\\gtkwave.ini\" -v -I ";
 
 			if(!name.empty()) {
 				sCmd	+= "\"";
