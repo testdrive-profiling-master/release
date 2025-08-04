@@ -152,7 +152,7 @@ bool VerilatedVcdGTKWave::open(const std::string& name)
 void VerilatedVcdGTKWave::close()
 {
 	if(m_fifo.consume && !m_bGtkStarted) {
-		int iTimeOut	= 20;
+		int iTimeOut	= 100;
 
 		while(*((volatile char*)m_fifo.consume) && iTimeOut) {
 			Sleep(100);	// wait last consume.
