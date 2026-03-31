@@ -82,9 +82,6 @@ function RequireMingwPackage(package_name)
 end
 
 -- Most recent required package
-RequireMingwPackage("tree")											-- 2024/7
-RequireMingwPackage("whois")										-- 2024/7
-RequireMingwPackage("mingw-w64-ucrt-x86_64-unrar")					-- 2024/7
 RequireMingwPackage("mingw-w64-ucrt-x86_64-libevent")				-- 2024/8
 RequireMingwPackage("mingw-w64-ucrt-x86_64-tgui")					-- 2024/8
 RequireMingwPackage("mingw-w64-ucrt-x86_64-enet")					-- 2024/9
@@ -92,6 +89,7 @@ RequireMingwPackage("mingw-w64-ucrt-x86_64-nodejs")					-- 2024/10
 RequireMingwPackage("mingw-w64-ucrt-x86_64-7zip")
 RequireMingwPackage("mingw-w64-ucrt-x86_64-gtk3")
 RequireMingwPackage("base-devel")									-- 2026/3
+RequireMingwPackage("mingw-w64-ucrt-x86_64-meson")
 
 -------------------------------------------------------
 -- check notepad++ installation
