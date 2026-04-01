@@ -18,6 +18,7 @@ pacman -S --noconfirm automake-wrapper
 pacman -S --noconfirm msys2-w32api-headers
 pacman -S --noconfirm msys2-w32api-runtime
 pacman -S --noconfirm base-devel
+pacman -S --noconfirm cpio
 
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-putty
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-zlib
