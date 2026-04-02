@@ -91,6 +91,8 @@ RequireMingwPackage("mingw-w64-ucrt-x86_64-gtk3")
 RequireMingwPackage("base-devel")									-- 2026/3
 RequireMingwPackage("mingw-w64-ucrt-x86_64-meson")
 RequireMingwPackage("cpio")
+RequireMingwPackage("mingw-w64-ucrt-x86_64-llvm")					-- 2026/4
+RequireMingwPackage("mingw-w64-ucrt-x86_64-lld")
 
 -------------------------------------------------------
 -- check notepad++ installation
