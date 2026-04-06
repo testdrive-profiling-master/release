@@ -95,6 +95,15 @@ RequireMingwPackage("mingw-w64-ucrt-x86_64-llvm")					-- 2026/4
 RequireMingwPackage("mingw-w64-ucrt-x86_64-lld")
 RequireMingwPackage("mingw-w64-ucrt-x86_64-git")
 
+do	-- should delete this later
+	local banned_path = String()
+	banned_path:GetEnvironment("TESTDRIVE_DIR")
+	banned_path = banned_path.s .. "bin/msys64/ucrt64/bin/make.exe"
+	if lfs.IsExist(banned_path) then
+		exec("rm -f \"" .. banned_path .. "\"")
+	end
+end
+
 -------------------------------------------------------
 -- check notepad++ installation
 -------------------------------------------------------
