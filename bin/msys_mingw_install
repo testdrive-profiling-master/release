@@ -20,6 +20,7 @@ pacman -S --noconfirm msys2-w32api-runtime
 pacman -S --noconfirm base-devel
 pacman -S --noconfirm cpio
 
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-git
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-putty
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-zlib
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-gmp
