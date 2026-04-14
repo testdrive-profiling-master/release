@@ -73,7 +73,6 @@ usr\bin\sed -i "s/: files db/: files/" < etc/nsswitch.conf
 usr\bin\sed -i "s;/ucrt64/;../;" ucrt64/share/ngspice/scripts/spinit
 
 del /Q msys_mingw_install temp.sh
-copy /Y ..\gtkwave.ini .\ucrt64\bin\
 
 cd ..
 

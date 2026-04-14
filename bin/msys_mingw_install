@@ -58,7 +58,6 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-cython
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-http-parser
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-libgit2
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-astyle
-pacman -S --noconfirm mingw-w64-ucrt-x86_64-gtkwave
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-verilator
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-ghex
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-cmake
