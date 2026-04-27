@@ -94,6 +94,7 @@ RequireMingwPackage("cpio")
 RequireMingwPackage("mingw-w64-ucrt-x86_64-llvm")					-- 2026/4
 RequireMingwPackage("mingw-w64-ucrt-x86_64-lld")
 RequireMingwPackage("mingw-w64-ucrt-x86_64-git")
+RequireMingwPackage("mingw-w64-ucrt-x86_64-lua54")
 
 do	-- should delete this later
 	local banned_path = String()
