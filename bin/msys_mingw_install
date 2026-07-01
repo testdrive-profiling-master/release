@@ -31,7 +31,7 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-gflags
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-libconfig
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-binutils
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-gcc-libs
-pacman -S --noconfirm mingw-w64-ucrt-x86_64-pkg-config
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-pkgconf
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-ccache
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-gcc
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-gdb
