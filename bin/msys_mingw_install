@@ -95,6 +95,7 @@ pacman -S --noconfirm mingw-w64-ucrt-x86_64-7zip
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-meson
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-lld
 pacman -S --noconfirm mingw-w64-ucrt-x86_64-llvm
+pacman -S --noconfirm mingw-w64-ucrt-x86_64-nasm
 
 cd /ucrt64/bin
 ccache -c
